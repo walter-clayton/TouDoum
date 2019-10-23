@@ -1,4 +1,5 @@
 <?php require 'inc/functions.php' ?>
+<?php require 'header.php' ?>
 <?php 
 
 if(!empty($_POST)){
@@ -61,13 +62,18 @@ if(!empty($_POST)){
     $req = $pdo->prepare("INSERT INTO users SET firstname = ?, surname = ?, username = ?, email = ?, password = ?, age = ?");
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
     $req->execute([$_POST['firstname'], $_POST['surname'], $_POST['username'], $_POST['email'], $password, $_POST['age']]);
+    session_start();
+    var_dump($user);
+    $_SESSION['auth'] = $user;
     header('Location: login.php');
     exit();
 }
-
-    debug($errors);
-
 }
+    require 'inc/db.php';
+    $req = $pdo->prepare('SELECT id FROM users WHERE username = ?');
+    $req->execute([$_POST['username']]);
+    $user = $req->fetch();
+    var_dump($user);
 
 ?>
 

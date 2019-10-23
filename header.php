@@ -31,7 +31,7 @@
     <!-- HEADER -->
 <header class="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="../index.html"><p style="color:red">TouDoum</p></a>
+    <a href="index.html"><p style="color:red">TouDoum</p></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
             aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,7 +39,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">            
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="../index.html"><i class="fas fa-home fa-2x"></i> <span
+                    <a class="nav-link" href="index.html"><i class="fas fa-home fa-2x"></i> <span
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -55,8 +55,8 @@
             </form>
             </div>
     <div class="signIn">
-        <a href="../register.php" class="btn btn-rounded"><i class="fas fa-user-plus"></i> Register</a>
-        <a href="../login.php" class="btn btn-rounded"><i class="fas fa-sign-in-alt"></i> Log In</a>
+        <a href="register.php" class="btn btn-rounded"><i class="fas fa-user-plus"></i> Register</a>
+        <a href="login.php" class="btn btn-rounded"><i class="fas fa-sign-in-alt"></i> Log In</a>
     </div>
  
     </nav>
