@@ -45,7 +45,7 @@ p {
 }
 
 #logo {
-	width: 100%;
+	width: 5%;
 }
 
 .showcase {
@@ -143,6 +143,7 @@ p {
 
 .btn-rounded {
 	border-radius: 5px;
+
 }
 
 .btn-xl {

@@ -23,6 +23,11 @@ body {
     color: #999;
 }
 
+.header {
+	display: flex;
+	flex-direction: column;
+}
+
 
 ul {
 	list-style: none;
@@ -45,7 +50,7 @@ p {
 }
 
 #logo {
-	width: 100%;
+	width: 10%;
 }
 
 .showcase {
