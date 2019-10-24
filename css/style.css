@@ -18,7 +18,11 @@ body {
     font-family: 'Arial', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	height: 100vh;
-	position: relative;
+/* 	position: relative; */
+display: flex;
+flex-direction: column;
+min-height: 100% !important;
+	
 }
 
 #logo {
@@ -153,6 +157,12 @@ p {
 	.showcase-content p {
 		font-size: 1.5rem;
 	}
+/* put footer in relative on mobile */
+	.footer {
+/* 		position: relative; */
+		bottom: 0;
+		width: 100%;
+	}
 
 	.footer-cols {
 		grid-template-columns: repeat(2, 1fr);
@@ -185,7 +195,7 @@ p {
 
 .footer {
 	background-color: #343A40;
-	position: absolute;
+	position: ;
 	bottom: 0;
 	width: 100%;
 
@@ -263,8 +273,10 @@ padding:20px auto; */
 
 /* SECTIONS */
 /* SECTION FOR THE CONTENT - pre-style it */
-.content {
-	margin: 0 auto;
+.page {
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 20%;
 }
 
 /* GALLERY */
@@ -341,6 +353,18 @@ padding:20px auto; */
 /* RESPONSIVE */
 /*Responsiveness, media query: put flex from rows to columns (container divs)*/
 @media (max-width: 600px) {
+	/* SignIn button */
+	.smIcon {
+		visibility: hidden;
+	}
+	a.btn.btn-rounded {
+		width: 22% !important;
+		padding-right:40px;
+		margin-right: 10px;
+		margin-top:15px;
+	}
+
+/* CONTENT */
 	.showcase-content h1 {
 		font-size: 2.5rem;
 		line-height: 1;

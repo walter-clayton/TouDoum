@@ -39,8 +39,7 @@
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
                 <!--  Depending on location: href="../index.php OR href="./index.php-->
-                    <a class="nav-link" href="./index.php"><i class="fas fa-home fa-2x"></i> <span
-                    class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./index.php"><i class="fas fa-home fa-2x"></i> <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="btn btn-rounded" style="margin:5">Films</a>
@@ -55,10 +54,12 @@
             </form>
             </div>
     <div class="signIn">
-        <a href="./register.php" class="btn btn-rounded"><i class="fas fa-user-plus"></i> Register</a>
-        <a href="./login.php" class="btn btn-rounded"><i class="fas fa-sign-in-alt"></i> Log In</a>
+        <a href="./register.php" class="btn btn-rounded"><i class="fas fa-user-plus"></i><span class="smIcon"> Register </span></a>
+        <a href="./login.php" class="btn btn-rounded"><i class="fas fa-sign-in-alt"></i><span class="smIcon"> Log In </span></a>
     </div>
  
     </nav>
    
 </header>
+
+<section class="page">
