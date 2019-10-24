@@ -1,19 +1,23 @@
+<?php require 'header.php'?>
 <?php
-
 if(!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])){
     require_once 'inc/db.php';
     require_once 'inc/functions.php';
     session_start();
     $req = $pdo->prepare('SELECT id , username , password FROM users WHERE username = :username or email = :username');
+    
     $req->execute(['username' => $_POST['username']]);
     $user = $req->fetch(); // permet de récuperer le première enregistrement
 
     if($user){
-        echo "ok";
+        echo "pseudo valide" . "<br>";
         if(password_verify($_POST['password'], $user->password)){
             echo "mdp valide";
-        };
-
+        }else{
+            echo "mdp incorrecte";
+        }
+    }else{
+        echo "pseudo non valide";
     }
 }
 ?>
