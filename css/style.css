@@ -16,7 +16,9 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    -webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	height: 100vh;
+	position: relative;
 }
 
 #logo {
@@ -185,6 +187,8 @@ p {
 	background-color: #343A40;
 	position: absolute;
 	bottom: 0;
+	width: 100%;
+
 }
 .social {
 /* center soc media icons */
@@ -351,10 +355,15 @@ padding:20px auto; */
 		padding: 1.2rem 1.6rem;
 		text-transform: uppercase;
 	}
+	.footer {
+		/* push footer down on mobile */
+		position: relative;
+	}
 	.footer-cols {
 		display: flex;
 		flex-direction: column;
 		padding-left: 30px;
+		bottom: 0;
 	}
 	.social i{
 		font-size:35px;
