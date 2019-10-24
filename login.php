@@ -10,7 +10,9 @@ $req->execute(['username' => $_POST['username']]);
 $user = $req->fetch(); // permet de récuperer le première enregistrement
 
 if($user && (password_verify($_POST['password'], $user->password))){
-    echo "vous êtes logé" . "<br>";
+    $_SESSION['auth'] = $_POST['username'];
+    echo $_SESSION['auth'];
+    header('location: index.php');
 }else{
     echo "pseudo ou mdp non valide";
 }

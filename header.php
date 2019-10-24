@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -54,8 +55,14 @@
             </form>
             </div>
     <div class="signIn">
+    <div class="signIn">
+        <?php if (isset($_SESSION['auth'])): ?>
+            <a href="#" class="btn btn-rounded-user"><span><?php echo $_SESSION['auth'] ?></span>
+            <a href="./logout.php" class="btn btn-rounded"><i class="fas fa-sign-in-alt"></i><span class="smIcon"> Log Out </span></a>
+        <?php else: ?>
         <a href="./register.php" class="btn btn-rounded"><i class="fas fa-user-plus"></i><span class="smIcon"> Register </span></a>
         <a href="./login.php" class="btn btn-rounded"><i class="fas fa-sign-in-alt"></i><span class="smIcon"> Log In </span></a>
+        <?php endif; ?>
     </div>
  
     </nav>
