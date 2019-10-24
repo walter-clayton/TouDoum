@@ -1,5 +1,3 @@
-</section>
- 
  <footer class="footer">
     <div class="social">
         <p>Follow us on social media</p>
