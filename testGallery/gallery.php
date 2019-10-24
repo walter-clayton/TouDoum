@@ -1,41 +1,3 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- FontAwesome link -->
-    <script src="https://kit.fontawesome.com/23325f0d76.js" crossorigin="anonymous"></script>
-    <!-- Call JQuery -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
-    <!-- icons library-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/23325f0d76.js"></script>
-    <!-- Bootsrap link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/style2.css">
-    <title>TouDoum - Watch Your Favourite Series & Movies Online</title>
-</head>
-
-<body>
-
-</body>
-<!-- php -->
-<?php 
-include '../header.php' ;
-?>
-
-
-
-<!-- PHP -->
 <?php
 include 'functions.php';
 // Connect to MySQL
@@ -46,12 +8,16 @@ $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!-- HEADER -->
-<!-- < ?=template_header('Gallery')?> -->
+<!-- php -->
+<?php 
+include '../header.php' ;
+?>
 
 <div class="content home">
-	<h2>Gallery</h2>
-	<p>Welcome to the gallery page, you can view the list of images below.</p>
-	<a href="upload.php" class="upload-image">Upload Image</a>
+	<div class="start">
+	<h2 style="color:red">Check out our latest movies!</h2>
+	<p>Welcome to our Movies and Series database!</p>
+	</div>
 	<div class="images">
 		<?php foreach ($images as $image): ?>
 		<a href="#">
@@ -75,12 +41,13 @@ document.querySelectorAll('.images a').forEach(img_link => {
 		let img = new Image();
 		img.onload = () => {
 			// Create the pop out image
+			//MAKE A LINK bn watch noe and trailer page!!!
 			image_popup.innerHTML = `
 				<div class="con">
 					<h3>${img_meta.dataset.title}</h3>
 					<p>${img_meta.alt}</p>
 					<img src="${img.src}" width="${img.width}" height="${img.height}">
-					<a href="delete.php?id=${img_meta.dataset.id}" class="trash" title="Delete Image"><i class="fas fa-trash fa-xs"></i></a>
+					<a href="#" class="watch" style="text-decoration:none; color:red" title="Watch"><i class="fas fa-tv fa-2x" style="margin:10; color:red"></i> Watch Now</a>
 				</div>
 			`;
 			image_popup.style.display = 'flex';
@@ -105,5 +72,7 @@ image_popup.onclick = e => {
 <?php
 include '../footer.php';
 ?>
+</body>
+
 
 </html>

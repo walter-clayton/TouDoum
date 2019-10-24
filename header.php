@@ -1,5 +1,4 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +21,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>TouDoum - Watch Your Favourite Series & Movies Online</title>
 </head>
 
@@ -31,7 +30,8 @@
     <!-- HEADER -->
 <header class="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="../index.html"><p style="color:red">TouDoum</p></a>
+    <!-- <a href="./index.php"><img src="./img/Logo-TouDoum.png" alt="logo" id="logo"></a> -->
+        <!-- <a href="./index.php"> --><p style="color:red; width:70px;">TouDoum</p><!-- </a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
             aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,8 +39,9 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">            
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="../index.html"><i class="fas fa-home fa-2x"></i> <span
-                            class="sr-only">(current)</span></a>
+                <!--  Depending on location: href="../index.php OR href="./index.php-->
+                    <a class="nav-link" href="../index.php"><i class="fas fa-home fa-2x"></i> <span
+                    class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="btn btn-rounded" style="margin:5">Films</a>
@@ -55,12 +56,11 @@
             </form>
             </div>
     <div class="signIn">
-        <a href="../register.php" class="btn btn-rounded"><i class="fas fa-user-plus"></i> Register</a>
-        <a href="../login.php" class="btn btn-rounded"><i class="fas fa-sign-in-alt"></i> Log In</a>
+        <a href="#" class="btn btn-rounded"><i class="fas fa-user-plus"></i> Register</a>
+        <a href="#" class="btn btn-rounded"><i class="fas fa-sign-in-alt"></i> Log In</a>
     </div>
  
     </nav>
-
    
 </header>
 
