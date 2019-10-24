@@ -30,7 +30,7 @@
     <!-- HEADER -->
 <header class="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="./index.php"><img src="./img/Logo-TouDoum.png" alt="logo" id="logo"></a>
+    <a href="./index.php"><img src="./images/Logo-TouDoum.png" alt="logo" id="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
             aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -63,7 +63,4 @@
    
 </header>
 
-
-</body>
-
-</html>
+<section class="content">

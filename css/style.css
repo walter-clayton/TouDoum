@@ -177,10 +177,14 @@ p {
 	}
 }
 
+
+
 /* FOOTER */
 
 .footer {
 	background-color: #343A40;
+	position: absolute;
+	bottom: 0;
 }
 .social {
 /* center soc media icons */
@@ -207,7 +211,7 @@ margin: 10px;
 
 .footer-cols {
 /* 	max-width: 70%; */
-	margin: 1rem auto;
+/* 	margin-left: 1rem auto; */
 	overflow: auto;
 }
 
@@ -251,6 +255,12 @@ padding:20px auto; */
 /* 	height: 70px; */
 	width: 280px;
 	margin: 30 auto;
+}
+
+/* SECTIONS */
+/* SECTION FOR THE CONTENT - pre-style it */
+.content {
+	margin: 0 auto;
 }
 
 /* GALLERY */
