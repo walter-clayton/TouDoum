@@ -1,5 +1,5 @@
 <?php
-include 'functions.php';
+include './inc/functionsGallery.php';
 // Connect to MySQL
 $pdo = pdo_connect_mysql();
 // MySQL query that selects all the images
@@ -10,7 +10,7 @@ $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <!-- HEADER -->
 <!-- php -->
 <?php 
-include '../header.php' ;
+include './header.php' ;
 ?>
 
 <div class="content home">
@@ -70,7 +70,7 @@ image_popup.onclick = e => {
 
 <!-- FOOTER PHP -->
 <?php
-include '../footer.php';
+include './footer.php';
 ?>
 </body>
 

@@ -28,8 +28,7 @@ ul {
 	list-style: none;
 }
 
-h1,
-{
+h1 {
 	color: var(--gray-color);
 }
 

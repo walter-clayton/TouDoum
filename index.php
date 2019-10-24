@@ -34,8 +34,8 @@ include('./header.php');
             <i class="fas fa-mobile-alt fa-3x"></i>
         </div>
         <p>Watch anywhere. Cancel Anytime</p>
-        <a href="./testGallery/gallery.php" class="btn btn-xl"> Discover  <i class="fas fa-chevron-circle-right"></i></a>
-        <a href="#" class="btn btn-xl">Register <i class="fas fa-chevron-circle-right"></i></a>
+        <a href="./gallery.php" class="btn btn-xl"> Discover  <i class="fas fa-chevron-circle-right"></i></a>
+        <a href="./register.php" class="btn btn-xl">Register <i class="fas fa-chevron-circle-right"></i></a>
     </div>
 </section>
 
