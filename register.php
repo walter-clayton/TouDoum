@@ -1,12 +1,12 @@
-<?php require 'inc/functions.php' ?>
-<?php require 'header.php' ?>
+<?php require './inc/functions.php' ?>
+<?php require './header.php' ?>
 <?php
 
 if(!empty($_POST)){
 
 $errors = array();
 
-require_once 'inc/db.php';
+require_once './inc/db.php';
 
 if(empty($_POST['firstname']) || !preg_match('/^[a-zA-Z]+$/', $_POST['firstname'])){
     $errors['firstname'] = "Votre prénom n'est pas valide";
@@ -58,7 +58,7 @@ if(empty($_POST['age']) || !preg_match('/^[0-9]+$/', $_POST['age'])){
 
 if(empty($errors)){
 
-require_once 'inc/db.php';
+require_once './inc/db.php';
 $req = $pdo->prepare("INSERT INTO users SET firstname = ?, surname = ?, username = ?, email = ?, password = ?, age = ?");
 $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 $req->execute([$_POST['firstname'], $_POST['surname'], $_POST['username'], $_POST['email'], $password, $_POST['age']]);
@@ -76,15 +76,6 @@ exit();
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Document</title>
-</head>
-<body>
 
 <?php if(!empty($errors)):?>
     <p>Vous n'avez pas rempli le formulaire correctement</p>
@@ -135,10 +126,7 @@ exit();
     <button type="submit">S'inscrire</button>
 
 </form>
-</body>
 
 <?php
 include "./footer.php";
 ?>
-
-</html>

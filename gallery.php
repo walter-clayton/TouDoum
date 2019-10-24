@@ -72,7 +72,3 @@ image_popup.onclick = e => {
 <?php
 include './footer.php';
 ?>
-</body>
-
-
-</html>

@@ -1,8 +1,8 @@
-<?php require 'header.php'?>
+<?php require './header.php'?>
 <?php
 if(!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])){
-require_once 'inc/db.php';
-require_once 'inc/functions.php';
+require_once './inc/db.php';
+require_once './inc/functions.php';
 session_start();
 $req = $pdo->prepare('SELECT id , username , password FROM users WHERE username = :username or email = :username');
 
@@ -16,16 +16,6 @@ if($user && (password_verify($_POST['password'], $user->password))){
 }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Document</title>
-</head>
-<body>
 
 <form action="" method="POST">
 
@@ -43,11 +33,6 @@ if($user && (password_verify($_POST['password'], $user->password))){
 
 </form>
 
-
-</body>
-
 <?php
 include "./footer.php";
 ?>
-
-</html>
