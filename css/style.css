@@ -274,6 +274,9 @@ padding:20px auto; */
 /* SECTION FOR THE CONTENT - pre-style it */
 .page {
 	padding: 18px 0px 20px 0px;
+	background-image: url("https://i.ibb.co/vXqDmnh/background.jpg");
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 /* GALLERY */
