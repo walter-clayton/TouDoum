@@ -85,45 +85,43 @@ exit();
 <?php endforeach; ?>
     </ul>
 <?php endif; ?>
-    <h1>S'inscrire</h1>
-
-<form action="" method="POST">
-
+<form action="" method="POST" class="form-login bg-dark">
+    <h2>S'inscrire</h2>
     <div class="form-group">
-        <label for="">Prénom</label>
+        <label for="">Prénom</label><br>
         <input type="text" name="firstname"/>
     </div>
 
     <div class="form-group">
-        <label for="">Nom</label>
+        <label for="">Nom</label><br>
         <input type="text" name="surname"/>
     </div>
 
     <div class="form-group">
-        <label for="">Pseudonyme</label>
+        <label for="">Pseudonyme</label><br>
         <input type="text" name="username"/>
     </div>
 
     <div class="form-group">
-        <label for="">Âge</label>
+        <label for="">Âge</label><br>
         <input type="text" name="age"/>
     </div>
 
     <div class="form-group">
-        <label for="">E-mail</label>
+        <label for="">E-mail</label><br>
         <input type="text" name="email"/>
     </div>
 
     <div class="form-group">
-        <label for="">Mot de passe</label>
+        <label for="">Mot de passe</label><br>
         <input type="password" name="password"/>
     </div>
     <div class="form-group">
-<label for="">Confirmez votre mot de passe</label>
+<label for="">Confirmez votre mot de passe</label><br>
 <input type="password" name="password_confirm"/>
 </div>
 
-    <button type="submit">S'inscrire</button>
+    <button type="submit" class="btn btn-rounded">S'inscrire</button>
 
 </form>
 

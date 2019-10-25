@@ -18,21 +18,18 @@ if($user && (password_verify($_POST['password'], $user->password))){
 }
 }
 ?>
-
-<form action="" method="POST">
-
+<form action="" method="POST" class="form-login bg-dark">
+    <h2>Se conencter</h2>
     <div class="form-group">
-        <label for="">Username or E-mail</label>
+        <label for="">Username or E-mail</label><br>
         <input type="text" name="username"/>
     </div>
 
     <div class="form-group">
-        <label for="">Mot de passe</label>
+        <label for="">Mot de passe</label><br>
         <input type="password" name="password"/>
-    </div>
-
-    <button type="submit">Se connecter</button>
-
+    </div><br>
+    <button type="submit" class="btn btn-rounded">Se connecter</button>
 </form>
 
 <?php

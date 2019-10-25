@@ -273,9 +273,7 @@ padding:20px auto; */
 /* SECTIONS */
 /* SECTION FOR THE CONTENT - pre-style it */
 .page {
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-bottom: 20%;
+	padding: 18px 0px 20px 0px;
 }
 
 /* GALLERY */
@@ -429,4 +427,16 @@ padding:20px auto; */
 	margin-top: 3rem;
 }
 
+}
+
+/* mehmet */
+.form-login {
+	text-align:center;
+	color: #d23816;
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+	border: 2px solid #d23816;
+	border-radius: 15px;
+	align-content: center;
 }
