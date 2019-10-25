@@ -7,7 +7,7 @@ include('./header.php');
 <section class="section-content">
     <div class="showcase-content">
         <img src="./images/Logo-TouDoum.png" alt="logo" id="logo-Big">
-        <h1>See what's next</h1>
+        <h1 style="color:#fff">See what's next</h1>
         <div class="screen">
             <i class="fas fa-tv fa-3x"></i>
             <i class="fas fa-tablet-alt fa-3x"></i>

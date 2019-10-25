@@ -17,12 +17,10 @@
 body {
     font-family: 'Arial', sans-serif;
 	-webkit-font-smoothing: antialiased;
-	height: 100vh;
-/* 	position: relative; */
-display: flex;
-flex-direction: column;
-min-height: 100% !important;
-	
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh !important;
+	margin: 0;
 }
 
 #logo {
@@ -34,9 +32,9 @@ ul {
 	list-style: none;
 }
 
-h1 {
+/* h1 {
 	color: var(--gray-color);
-}
+} */
 
 a {
 	color: #fff;
@@ -74,23 +72,23 @@ p {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	margin-top: 9rem;
+	/* margin-top: 9rem; */
 }
 
 .showcase-content h1 {
 	font-weight: 700;
 	font-size: 5.2rem;
-	line-height: 1.1;
-	margin: 0 0 2rem;
+	/* line-height: 1.1;
+	margin: 0 0 2rem; */
 }
 
 .showcase-content p {
 	text-transform: uppercase;
-	color: #343434;
+	color: #fff;
 	font-weight: 400;
 	font-size: 1.9rem;
-	line-height: 1.25;
-	margin: 0 0 2rem;
+	/* line-height: 1.25;
+	margin: 0 0 2rem; */
 }
 
 
@@ -110,7 +108,7 @@ p {
 	outline: none;
 	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
 	border-radius: 2px;
-	opacity: 0.8;
+	opacity: 1;
 	border-radius: 5px;
 }
 
@@ -218,7 +216,7 @@ margin: 10px;
 
 .social p {
 	text-align: center;
-	font-size: 22px;
+	font-size: 15px;
 	color: whitesmoke;
 }
 
@@ -245,7 +243,7 @@ margin: 10px;
 }
 
 .footer li {
-	line-height: 1.9;
+	line-height: 1.2;
 }
 
 /* INDEX */
@@ -273,10 +271,14 @@ padding:20px auto; */
 /* SECTIONS */
 /* SECTION FOR THE CONTENT - pre-style it */
 .page {
-	padding: 18px 0px 20px 0px;
+	padding: 10px 0px 10px 0px;
 	background-image: url("https://i.ibb.co/vXqDmnh/background.jpg");
 	background-attachment: fixed;
 	background-size: cover;
+	min-height: calc(100vh - (216px + 64px));
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* GALLERY */
@@ -435,11 +437,21 @@ padding:20px auto; */
 /* mehmet */
 .form-login {
 	text-align:center;
-	color: #d23816;
+	color: #ffffff;
 	margin: auto;
 	width: 50%;
 	padding: 10px;
-	border: 2px solid #d23816;
+	border: 1px solid rgb(202, 201, 201);
 	border-radius: 15px;
 	align-content: center;
+	background-color: rgba(0, 0, 0, 0.6);
+	-webkit-font-smoothing: antialiased;
+}
+.loginincorrecte{
+	background-color: #d23816;
+	color: white;
+	text-align: center;
+	margin: auto;
+	width: 16%;
+	border-radius: 5px;
 }

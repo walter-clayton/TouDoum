@@ -29,6 +29,7 @@
 
 <body>
     <!-- HEADER -->
+    <div class="container-header-section">
 <header class="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a href="./index.php"><img src="./images/Logo-TouDoum.png" alt="logo" id="logo"></a>

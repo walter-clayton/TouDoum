@@ -66,14 +66,6 @@ header('Location: login.php');
 exit();
 }
 }
-// require 'inc/db.php';
-// session_start();
-// $req = $pdo->prepare('SELECT id FROM users WHERE username = ?');
-// $req->execute([$_POST['username']]);
-// $user = $req->fetch();
-// $_SESSION['auth']= $user;
-// var_dump($_SESSION['auth']);
-
 ?>
 
 
@@ -85,7 +77,7 @@ exit();
 <?php endforeach; ?>
     </ul>
 <?php endif; ?>
-<form action="" method="POST" class="form-login bg-dark">
+<form action="" method="POST" class="form-login">
     <h2>S'inscrire</h2>
     <div class="form-group">
         <label for="">Prénom</label><br>

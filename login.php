@@ -3,7 +3,6 @@
 if(!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])){
 require_once './inc/db.php';
 require_once './inc/functions.php';
-session_start();
 $req = $pdo->prepare('SELECT id , username , password FROM users WHERE username = :username or email = :username');
 
 $req->execute(['username' => $_POST['username']]);
@@ -14,12 +13,12 @@ if($user && (password_verify($_POST['password'], $user->password))){
     echo $_SESSION['auth'];
     header('location: index.php');
 }else{
-    echo "pseudo ou mdp non valide";
+    echo '<p class="loginincorrecte">' . 'pseudo ou mdp non valide' . '</p>' . '<br>';
 }
 }
 ?>
-<form action="" method="POST" class="form-login bg-dark">
-    <h2>Se conencter</h2>
+<form action="" method="POST" class="form-login">
+    <h2>Se connecter</h2>
     <div class="form-group">
         <label for="">Username or E-mail</label><br>
         <input type="text" name="username"/>
@@ -29,7 +28,7 @@ if($user && (password_verify($_POST['password'], $user->password))){
         <label for="">Mot de passe</label><br>
         <input type="password" name="password"/>
     </div><br>
-    <button type="submit" class="btn btn-rounded">Se connecter</button>
+    <button type="submit" class="btn btn-rounded" style="opacity:1;">Se connecter</button>
 </form>
 
 <?php

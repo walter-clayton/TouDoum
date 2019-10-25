@@ -1,6 +1,7 @@
 <!-- End of section -->
 
 </section>
+    </div>
 
 <!-- Footer -->
  <footer class="footer">
