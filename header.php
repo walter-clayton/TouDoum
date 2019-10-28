@@ -44,10 +44,10 @@
                     <a class="nav-link" href="./index.php"><i class="fas fa-home fa-2x"></i> <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="btn btn-rounded" style="margin:5">Films</a>
+                    <a href="./films.php" class="btn btn-rounded" style="margin:5">Films</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="btn btn-rounded" style="margin:5">Series</a>
+                    <a href="./series.php" class="btn btn-rounded" style="margin:5">Series</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" style="margin-right:100">
@@ -58,7 +58,7 @@
     <div class="signIn">
     <div class="signIn">
         <?php if (isset($_SESSION['auth'])): ?>
-            <a href="#" class="btn btn-rounded-user"><span><?php echo $_SESSION['auth'] ?></span>
+            <a href="./account.php" class="btn btn-rounded-user"><span><?php echo $_SESSION['auth'] ?></span>
             <a href="./logout.php" class="btn btn-rounded"><i class="fas fa-sign-in-alt"></i><span class="smIcon"> Log Out </span></a>
         <?php else: ?>
         <a href="./register.php" class="btn btn-rounded"><i class="fas fa-user-plus"></i><span class="smIcon"> Register </span></a>
