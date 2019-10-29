@@ -49,12 +49,9 @@ document.querySelectorAll('.images a').forEach(img_link => {
 <?php
 $pop_up = $pdo->query("SELECT * FROM film");
 $pop_up2 = $pop_up->fetchAll(PDO::FETCH_ASSOC);
-
-/* var_dump($pop_up2); */
-/* var_dump($row); */
+var_dump($pop_up2);
 while ($row = $pop_up->fetch()) {
 echo $row['id']."<br />\n";
-
 }?>
 <?php foreach($pop_up2 as $row){?>
 <img src="${img.src}" width="${img.width}" height="${img.height}">
