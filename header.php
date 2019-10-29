@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php 
+if(session_status() == PHP_SESSION_NONE){
+session_start(); 
+}
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -71,3 +75,12 @@
 </header>
 
 <section class="page">
+
+<?php if(isset($_SESSION['flash'])): ?>
+    <?php foreach($_SESSION['flash'] as $type => $message):?>
+        <div class="alert alert-<?= $type; ?>">
+            <?= $message; ?>
+        </div>
+    <?php endforeach; ?>
+    <?php unset($_SESSION['flash']); ?>
+<?php endif; ?>

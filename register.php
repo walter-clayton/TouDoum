@@ -1,5 +1,10 @@
-<?php require './inc/functions.php' ?>
-<?php require './header.php' ?>
+<?php require './inc/functions.php'; ?>
+<?php require './header.php'; ?>
+<?php 
+    if(isset($_SESSION['auth'])){
+        header('Location: index.php'); 
+    }
+?>
 <?php
 
 if(!empty($_POST)){
@@ -63,59 +68,63 @@ $req = $pdo->prepare("INSERT INTO users SET firstname = ?, surname = ?, username
 $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 $req->execute([$_POST['firstname'], $_POST['surname'], $_POST['username'], $_POST['email'], $password, $_POST['age']]);
 header('Location: login.php');
+$_SESSION['flash']['success'] = "Création de compte effectuer avec succès";
 exit();
 }
 }
 ?>
 
-
+<div class="formsize">
+    <div class="formradius">
 <?php if(!empty($errors)):?>
-    <p>Vous n'avez pas rempli le formulaire correctement</p>
+    <p class="registerincorrecte">Vous n'avez pas rempli le formulaire correctement</p>
     <ul>
 <?php foreach($errors as $error): ?>
-    <li><?php echo $error;?></li>
+    <li><?php echo '<p class="registerincorrecte">' . $error . '</p>';?></li>
 <?php endforeach; ?>
     </ul>
 <?php endif; ?>
+</div>
 <form action="" method="POST" class="form-login">
     <h2>S'inscrire</h2>
     <div class="form-group">
-        <label for="">Prénom</label><br>
-        <input type="text" name="firstname"/>
+        <!-- <label for="">Prénom</label> -->
+        <input type="text" name="firstname"placeholder="Prénom" required/>
     </div>
 
     <div class="form-group">
-        <label for="">Nom</label><br>
-        <input type="text" name="surname"/>
+        <!-- <label for="">Nom</label> -->
+        <input type="text" name="surname"placeholder="Nom" required/>
     </div>
 
     <div class="form-group">
-        <label for="">Pseudonyme</label><br>
-        <input type="text" name="username"/>
+        <!-- <label for="">Pseudonyme</label> -->
+        <input type="text" name="username"placeholder="Pseudonyme" required/>
     </div>
 
     <div class="form-group">
-        <label for="">Âge</label><br>
-        <input type="text" name="age"/>
+        <!-- <label for="">Âge</label> -->
+        <input type="text" name="age"placeholder="Âge" required/>
     </div>
 
     <div class="form-group">
-        <label for="">E-mail</label><br>
-        <input type="text" name="email"/>
+        <!-- <label for="">E-mail</label> -->
+        <input type="text" name="email"placeholder="E-mail" required/>
     </div>
 
     <div class="form-group">
-        <label for="">Mot de passe</label><br>
-        <input type="password" name="password"/>
+        <!-- <label for="">Mot de passe</label> -->
+        <input type="password" name="password"placeholder="Mot de passe" required/>
     </div>
     <div class="form-group">
-<label for="">Confirmez votre mot de passe</label><br>
-<input type="password" name="password_confirm"/>
+<!-- <label for="">Confirmez le mot de passe</label> -->
+<input type="password" name="password_confirm" placeholder="Confirmez le mot de passe" required/>
 </div>
 
     <button type="submit" class="btn btn-rounded">S'inscrire</button>
 
 </form>
+</div>
 
 <?php
 include "./footer.php";
