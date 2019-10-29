@@ -273,6 +273,8 @@ padding:20px auto; */
 .page {
 	padding: 10px 0px 10px 0px;
 	background-image: url("https://i.ibb.co/vXqDmnh/background.jpg");
+	/* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) */
+	/* filter: brightness(50%);  */
 	background-attachment: fixed;
 	background-size: cover;
 	min-height: calc(100vh - (216px + 64px));
