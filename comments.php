@@ -1,57 +1,59 @@
-<!-- charset against malicous code -->
-<meta charset="utf-8" />
+<!-- HEADER -->
 <?php
-/* connect to DB */
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=toudoum;charset=utf8','root','');
-
-if(isset($_GET['id']) AND !empty($_GET['id'])) {
-    /*charset against malicous code  - normalise special chars  */
-   $getid = htmlspecialchars($_GET['id']);
-   /* request - prepare all from table "article" */
-   $article = $bdd->prepare('SELECT * FROM articles WHERE id = ?');
-   $article->execute(array($getid));
-   $article = $article->fetch();
-   /* check if vars are not set or empty */
-   if(isset($_POST['submit_commentaire'])) {
-      if(isset($_POST['pseudo'],$_POST['commentaire']) AND !empty($_POST['pseudo']) AND !empty($_POST['commentaire'])) {
-          /*charset against malicous code  - normalise special chars  */
-         $pseudo = htmlspecialchars($_POST['pseudo']);
-         $commentaire = htmlspecialchars($_POST['commentaire']);
-         /* if pseudo string longer than 25 chars */
-         if(strlen($pseudo) < 25) {
-            $ins = $bdd->prepare('INSERT INTO commentaires (pseudo, commentaire, id_article) VALUES (?,?,?)');
-            $ins->execute(array($pseudo,$commentaire,$getid));
-            $c_msg = "<span style='color:green'>Votre commentaire a bien été posté</span>";
-         } else {
-            $c_msg = "Erreur: Le pseudo doit faire moins de 25 caractères";
-         }
-      } else {
-         $c_msg = "Erreur: Tous les champs doivent être complétés";
-      }
-   }
-   /* insert comments into the databse */
-   $commentaires = $bdd->prepare('SELECT * FROM commentaires WHERE id_article = ? ORDER BY id DESC');
-   $commentaires->execute(array($getid));
+include('./header.php');
 ?>
 
-<h2>Article:</h2>
-<p><?= $article['contenu'] ?></p>
+<?php
+$bdd = new PDO('mysql:host=localhost;dbname=toudoum;charset=utf8','root','');
+/* if ($bdd->connect_error) {
+
+die("Connection failed: " . $bdd->connect_error);
+}
+echo "Connected successfully"; */
+
+if(isset($_GET['id']) AND !empty($_GET['id'])) {
+$getid = htmlspecialchars($_GET['id']);
+$films = $bdd->prepare('SELECT * FROM film WHERE id = ?');
+$films->execute(array($getid));
+$films = $films->fetch();
+if(isset($_POST['submit_commentaire'])) {
+if(isset($_POST['nickname'],$_POST['comment']) AND !empty($_POST['nickname']) AND !empty($_POST['comment'])) {
+$pseudo = htmlspecialchars($_POST['nickname']);
+$commentaire = htmlspecialchars($_POST['comment']);
+if(strlen($pseudo) < 25) {
+$ins = $bdd->prepare('INSERT INTO espace_membre (nickname, comment, id_film) VALUES (?,?,?)');
+$ins->execute(array($pseudo,$commentaire,$getid));
+$c_msg = "<span style='color:green'>Votre commentaire a bien été posté</span>";
+} else {
+$c_msg = "Error: The nick must not be longer than 25 characters";
+}
+} else {
+$c_msg = "Error: All fields must be filled in";
+}
+}
+$commentaire = $bdd->prepare('SELECT * FROM espace_membre WHERE id_film = ? ORDER BY id DESC');
+$commentaire->execute(array($getid));
+?>
+<h2>Film:</h2>
+<p><?= $films['link'] ?></p>
 <br />
-<h2>Commentaires:</h2>
-<form method="POST">
-   <input type="text" name="pseudo" placeholder="Votre pseudo" /><br />
-   <textarea name="commentaire" placeholder="Votre commentaire..."></textarea><br />
-   <input type="submit" value="Poster mon commentaire" name="submit_commentaire" />
+<h2 style="color:white">Comments:</h2>
+<form method="POST" >
+<input type="text" name="nickname" placeholder="Your nickname" style="margin:20px"/><br />
+<textarea name="comment" placeholder="Your comment..." style="margin:20px"></textarea><br />
+<input type="submit" value="Submit" name="submit_commentaire" style="margin:20px; color: white; background-color:red; border-radius: 5px; padding: 0.4rem 0.9rem;"/>
 </form>
-<!-- show error if not all fields are filled -->
 <?php if(isset($c_msg)) { echo $c_msg; } ?>
 <br /><br />
-<!-- SHOW COMMENTS -->
-<?php while($c = $commentaires->fetch()) { ?>
-   <b><?= $c['pseudo'] ?>:</b> <?= $c['commentaire'] ?><br />
-   <!-- end of array comments -->
+<div class="comments" styule="text-align:left" >
+<?php while($c = $commentaire->fetch()) { ?>
+<b style="color:white"><?= $c['nickname'] ?>:</b> <i style="color:white"><?= $c ['comment'] ?></i><br />
 <?php } ?>
-<!-- end of array contenu -->
 <?php
 }
+?>
+</div>
+<!-- FOOTER -->
+<?php
+include('./footer.php');
 ?>
