@@ -20,8 +20,8 @@ include './header.php' ;
 	</div>
 	<div class="images">
 		<?php foreach ($images as $image): ?>
-		<a href="#">
-			<img src="<?=$image['path']?>" alt="<?=$image['genre']?>" data-id="<?=$image['id']?>" data-title="<?=$image['title']?>" width="300" height="200">
+		<a href="comments.php?id=<?php echo $image['id'] ?>">
+		<img src="<?=$image['path']?>" alt="<?=$image['genre']?>" data-id="<?=$image['id']?>" data-title="<?=$image['title']?>" width="300" height="200">
 			<span><?=$image['genre']?></span>
 		</a>
 		<?php endforeach; ?>
@@ -46,27 +46,7 @@ document.querySelectorAll('.images a').forEach(img_link => {
 
 <h3>${img_meta.dataset.title}</h3>
 <p>${img_meta.alt}</p>
-<?php
-$pop_up = $pdo->query("SELECT * FROM film");
-$pop_up2 = $pop_up->fetchAll(PDO::FETCH_ASSOC);
 
-/* var_dump($pop_up2); */
-/* var_dump($row); */
-while ($row = $pop_up->fetch()) {
-echo $row['id']."<br />\n";
-
-}?>
-<?php foreach($pop_up2 as $row){?>
-<img src="${img.src}" width="${img.width}" height="${img.height}">
-<a href="comments.php?id=<?= $row['id'];}?>" class="watch" style="text-decoration:none; color:red" title="Watch"><i class="fas fa-tv fa-2x" style="margin:10; color:red"></i> Watch Now</a>
-</div>
-
-			`;
-			image_popup.style.display = 'flex';
-		};
-		img.src = img_meta.src;
-	};
-});
 // Hide the image popup container if user clicks outside the image
 image_popup.onclick = e => {
 	if (e.target.className == 'image-popup') {
