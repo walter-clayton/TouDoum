@@ -65,7 +65,7 @@ p {
 .showcase-content {
 	position: relative;
 	z-index: 2;
-	width: 65%;
+	width: 100%;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -272,9 +272,9 @@ padding:20px auto; */
 /* SECTION FOR THE CONTENT - pre-style it */
 .page {
 	padding: 10px 0px 10px 0px;
-	background-image: url("https://i.ibb.co/vXqDmnh/background.jpg");
+	background-image: url(../images/background.jpg);
 	/* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) */
-	filter: brightness(50%); 
+	/* filter: brightness(50%); */
 	background-attachment: fixed;
 	background-size: cover;
 	min-height: calc(100vh - (216px + 64px));
@@ -442,7 +442,7 @@ padding:20px auto; */
 	text-align:center;
 	color: #ffffff;
 	margin: auto;
-	width: 50%;
+	width: 70%;
 	padding: 10px;
 	border: 1px solid rgb(202, 201, 201);
 	border-radius: 15px;

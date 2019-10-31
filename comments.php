@@ -3,8 +3,15 @@
 include('./header.php');
 ?>
 
+<!-- IF LOGGED OUT NO ACCESS-->
+<?php 
+require './inc/functions.php';
+logged_only();
+?>
+
+<!-- section-->
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=toudoum;charset=utf8','root','');
+$bdd = new PDO('mysql:host=sql313.epizy.com;dbname=epiz_24666170_toudoum;charset=utf8','epiz_24666170','85qoY1Qs5WCAC7W');
 /* if ($bdd->connect_error) {
 
 die("Connection failed: " . $bdd->connect_error);
@@ -34,10 +41,10 @@ $c_msg = "Error: All fields must be filled in";
 $commentaire = $bdd->prepare('SELECT * FROM espace_membre WHERE id_film = ? ORDER BY id DESC');
 $commentaire->execute(array($getid));
 ?>
-<h2>Film:</h2>
+<h2 style="color:white"><?= $films['title'] ?></h2>
 <p><?= $films['link'] ?></p>
 <br />
-<h2 style="color:white">Comments:</h2>
+<h2 style="color:white">Comments</h2>
 <form method="POST" >
 <input type="text" name="nickname" placeholder="Your nickname" style="margin:20px"/><br />
 <textarea name="comment" placeholder="Your comment..." style="margin:20px"></textarea><br />
@@ -45,7 +52,7 @@ $commentaire->execute(array($getid));
 </form>
 <?php if(isset($c_msg)) { echo $c_msg; } ?>
 <br /><br />
-<div class="comments" styule="text-align:left" >
+<div class="comments" style="text-align:left" >
 <?php while($c = $commentaire->fetch()) { ?>
 <b style="color:white"><?= $c['nickname'] ?>:</b> <i style="color:white"><?= $c ['comment'] ?></i><br />
 <?php } ?>

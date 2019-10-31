@@ -13,6 +13,8 @@ $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
 include './header.php' ;
 ?>
 
+
+<!-- section-->
 <div class="content home">
 	<div class="start">
 	<h2 style="color:red">Check out our latest movies!</h2>
