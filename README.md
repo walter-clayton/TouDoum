@@ -17,7 +17,7 @@ http://www.toudoum.epizy.com/index.php
 html/css, bootstrap, JS, Jquery
 Nom du site: TouDoum
 Nous avons essayé de reproduire le visuel Netflix.
-Filtrer les catégories se réalise via différents carrousels.
+Filtrer les catégories se réalise via différents carrousels dans le style du site "Prime video".
 
 
 ### *Back*
@@ -29,7 +29,7 @@ L'utilisateur non-inscrit n'a accès qu'à la galerie "Discover".
 L'utilisateur inscrit a:
   - accès aux catégories.
   - le droit de commenter son choix.
-  - la possibilité de modifier son mdp via la page account.php
-  - la possibilité de réinitialiser son mdp via la page forget.php (envoi d'email, non fonctionnel car non disponible avec un compte free)
+  - la possibilité de modifier son mdp.
+  - la possibilité de réinitialiser son mdp. (envoi d'email, non fonctionnel car non disponible avec un compte free)
   
 
