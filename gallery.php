@@ -1,4 +1,5 @@
 <?php
+include './inc/db.php';
 include './inc/functionsGallery.php';
 // Connect to MySQL
 $pdo = pdo_connect_mysql();
