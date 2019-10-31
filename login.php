@@ -10,8 +10,7 @@ if(isset($_POST['username'])&& isset($_POST['password'])){
     if(!empty($_POST['username']) && !empty($_POST['password'])){
         require_once './inc/db.php';
         require_once './inc/functions.php';
-        $req = $pdo->prepare('SELECT id , username , password FROM users WHERE username = :username or email = :username');
-        
+        $req = $pdo->prepare('SELECT id , username , password FROM users WHERE username = :username');
         $req->execute(['username' => $_POST['username']]);
         $user = $req->fetch(); // permet de récuperer le première enregistrement
         '<div class="formsize>';
@@ -40,7 +39,7 @@ if(isset($_POST['username'])&& isset($_POST['password'])){
 <form action="" method="POST" class="form-login">
     <h2>Se connecter</h2>
     <div class="form-group">
-        <label for="">Username or E-mail</label><br>
+        <label for="">Username</label><br>
         <input type="text" name="username" required/>
     </div>
     <div class="form-group">

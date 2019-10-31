@@ -471,3 +471,19 @@ padding:20px auto; */
 	width: 50%;
 	border-radius: 6px;
 }
+.account{
+	color: white;
+	text-align: center;
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid rgb(202, 201, 201);
+	border-radius: 15px;
+}
+.account p {
+	color: white;
+}
+.changemdp {
+	width: 60%;
+}
