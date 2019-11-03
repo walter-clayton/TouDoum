@@ -1,10 +1,15 @@
 <?php
 function pdo_connect_mysql() {
 // Update the details below with your MySQL details
-$DATABASE_HOST = 'sql313.epizy.com';
-$DATABASE_USER = 'epiz_24666170';
-$DATABASE_PASS = '85qoY1Qs5WCAC7W';
-$DATABASE_NAME = 'epiz_24666170_toudoum';
+// $DATABASE_HOST = 'sql313.epizy.com';
+// $DATABASE_USER = 'epiz_24666170';
+// $DATABASE_PASS = '85qoY1Qs5WCAC7W';
+// $DATABASE_NAME = 'epiz_24666170_toudoum';
+//LOCALHOST MEHMET //
+$DATABASE_HOST='localhost';
+$DATABASE_NAME="GetFlix";
+$DATABASE_PASS="";
+$DATABASE_USER="root";
 try {
 return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
 } catch (PDOException $exception) {

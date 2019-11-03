@@ -1,10 +1,22 @@
 <?php
+include './inc/db.php';
 include './inc/functionsGallery.php';
 // Connect to MySQL
 $pdo = pdo_connect_mysql();
 // MySQL query that selects all the images
 $stmt = $pdo->query('SELECT * FROM film ORDER BY uploaded_date DESC');
 $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+<!-- SearchBAR -->
+<?php
+$articles = $pdo->prepare('SELECT title, id FROM film ORDER BY id DESC');
+if(isset($_GET['q']) AND !empty($_GET['q'])) {
+   $q = htmlspecialchars($_GET['q']);
+   $articles = $pdo->prepare('SELECT title, id FROM film WHERE title LIKE "%'.$q.'%" ORDER BY id DESC');
+   if($articles->rowCount() == 0) {
+      $articles = $pdo->query('SELECT title, id FROM film WHERE CONCAT(title) LIKE "%'.$q.'%" ORDER BY id DESC');
+   }
+}
 ?>
 
 <!-- HEADER -->
@@ -17,16 +29,28 @@ include './header.php' ;
 <!-- section-->
 <div class="content home">
 	<div class="start">
-	<h2 style="color:red">Check out our latest movies!</h2>
-	<p style="color: white">Welcome to our Movies and Series database!</p>
+	<form class="form-inline my-2 my-lg-0" style="margin-right:100">
+        <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search" required>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form><br>
 	</div>
+		<?php
+		if (isset($q)){
+		if($articles->rowCount() > 0) { ?>
+   		<ul>
+   		<?php while($a = $articles->fetch()) { ?>
+      	<li><p><a href="comments.php?id=<?php echo $a['id']?>"><?php echo $a['title']?></a></p></li>
+   		<?php } ?>
+   		</ul>
+		<?php } else { ?>
+		Aucun résultat pour: <?php echo $q ?>...
+		<?php }}?>
 	<div class="images">
-		<?php foreach ($images as $image): ?>
-		<a href="comments.php?id=<?php echo $image['id'] ?>">
-		<img src="<?=$image['path']?>" alt="<?=$image['genre']?>" data-id="<?=$image['id']?>" data-title="<?=$image['title']?>" width="300" height="200">
-			<span><?=$image['genre']?></span>
-		</a>
-		<?php endforeach; ?>
+		<?php
+			foreach ($images as $image): ?>
+			<a href="comments.php?id=<?php echo $image['id'] ?>">
+			<img src="<?=$image['path']?>" data-id="<?=$image['id']?>" data-title="<?=$image['title']?>"></a>
+		<?php endforeach;?>
 	</div>
 </div>
 <div class="image-popup"></div>
@@ -48,19 +72,6 @@ document.querySelectorAll('.images a').forEach(img_link => {
 
 <h3>${img_meta.dataset.title}</h3>
 <p>${img_meta.alt}</p>
-
-// Hide the image popup container if user clicks outside the image
-image_popup.onclick = e => {
-	if (e.target.className == 'image-popup') {
-		image_popup.style.display = "none";
-	}
-};
-</script>
-
-
-<!-- FOOTER PHP-->
-<!-- < ?=template_footer()?> -->
-
 
 <!-- FOOTER PHP -->
 <?php

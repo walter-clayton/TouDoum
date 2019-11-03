@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Oct 30, 2019 at 08:49 AM
--- Server version: 5.7.26
--- PHP Version: 7.2.18
+-- Hôte : sql313.byetcluster.com
+-- Généré le :  jeu. 31 oct. 2019 à 06:56
+-- Version du serveur :  5.6.45-86.1
+-- Version de PHP :  7.2.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,18 +19,17 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `toudoum`
+-- Base de données :  `epiz_24666170_toudoum`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `film`
+-- Structure de la table `film`
 --
 
-DROP TABLE IF EXISTS `film`;
-CREATE TABLE IF NOT EXISTS `film` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `film` (
+  `id` int(11) NOT NULL,
   `title` varchar(39) DEFAULT NULL,
   `link` varchar(202) DEFAULT NULL,
   `genre` varchar(62) DEFAULT NULL,
@@ -39,13 +38,12 @@ CREATE TABLE IF NOT EXISTS `film` (
   `movie` varchar(5) DEFAULT NULL,
   `serie` varchar(5) DEFAULT NULL,
   `vue` varchar(3) DEFAULT NULL,
-  `path` varchar(18) DEFAULT NULL,
-  `uploaded_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
+  `path` varchar(60) DEFAULT NULL,
+  `uploaded_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `film`
+-- Déchargement des données de la table `film`
 --
 
 INSERT INTO `film` (`id`, `title`, `link`, `genre`, `minAge`, `description`, `movie`, `serie`, `vue`, `path`, `uploaded_date`) VALUES
@@ -86,7 +84,38 @@ INSERT INTO `film` (`id`, `title`, `link`, `genre`, `minAge`, `description`, `mo
 (35, 'Once upon a time', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Rga4rp4j5TY\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Comédie, Drame, Romance', '8', 'And they all lived happily ever after -- or so everyone was led to believe. Emma Swan knows how to take care of herself. She\'s a 28-year-old bail bonds collector who\'s been on her own ever since she was abandoned as a baby. But when the son she gave up years ago finds her, everything starts to change.', 'FALSE', 'TRUE', '', './images/img35.jpg', '2019-10-29 10:15:54'),
 (36, 'The Crown', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/vLXYfgpqb8A\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Divertissement', '12', 'As Queen Elizabeth II (Olivia Colman) faces a rapidly changing Britain, her family continues to struggle against the needs of the monarchy and the wants of their fracturing personal lives.', 'FAUX', 'VRAI', '', './images/img36.jpg', '2019-10-29 10:15:54'),
 (37, 'Doom Patrol', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/6tTM9nbRk5A\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Action, Aventure, Comédie, Drame, Fantastique, Science-fiction', '12', 'Robotman, Negative Man, Crazy Jane ou encore Elasti-Girl souffrent de handicaps ou ont été physiquement marqués par des accidents. Rejetés par la société et désormais dotés de super pouvoirs , tous ont trouvé un sens à leur vie en agissant pour le compte du Dr. Niles Caulder, un scientifique fou qui leur est venu en aide à un moment donné de leur vie et qu\'ils aident à protéger la planète...', 'FALSE', 'TRUE', '', './images/img37.jpg', '2019-10-29 10:15:54'),
-(38, 'Marianne', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/q99hib0zS2M\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Drame, Horreur', '16', 'Emma, jeune romancière acerbe, découvre que les personnages monstrueux qu\'elle a créés dans sa série de romans horrifiques sont réellement en train de prendre vie...', 'FALSE', 'TRUE', '', './images/img38.jpg', '2019-10-29 10:15:53');
+(38, 'Marianne', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/q99hib0zS2M\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Drame, Horreur', '16', 'Emma, jeune romancière acerbe, découvre que les personnages monstrueux qu\'elle a créés dans sa série de romans horrifiques sont réellement en train de prendre vie...', 'FALSE', 'TRUE', '', './images/img38.jpg', '2019-10-29 10:15:53'),
+(39, 'Raising Dion', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Z6koPaImHzY\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Aventure, Drame, Famille, Science-fiction', '12', 'Après le décès de Mark, son mari, Nicole Reese élève seule son fils Dion. Élever seule un enfant n\'est déjà pas simple, mais les choses se compliquent lorsque Dion commence à développer des super-pouvoirs. Nicole veut garder le secret sur les pouvoirs de son fils, avec l’aide de Pat, le meilleur ami de son mari. Ils vont devoir protéger Dion contre ceux qui cherchent à profiter de ses capacités, tout en recherchant l\'origine de celles-ci.', 'FALSE', 'TRUE', '', './images/raising-dion.jpg', '2019-10-31 05:49:45'),
+(40, 'Euphoria (US)', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dqOb8pqOb10\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Drame', '16', 'A 17 ans, Rue Bennett, fraîchement sortie de désintox, cherche à donner un sens à son existence. Elle se lie très vite à Jules Vaughn, une fille trans récemment arrivée en ville après le div orce de ses parents. Dans leur sillage gravitent Nate Jacobs, un sportif dont les problèmes de colère masquent des complexes sexuels ; Maddy Perez, la petite amie de Nate ; Chris McKay, star de l\'équipe de football qui peine à suivre les cours ; Cassie Howard, dont le passif sexuel continue de la poursuivre ; Lexi Howard, jeune sœur de Cassie et amie d\'enfance de Rue ; et Kat Hernandez, en pleine exploration de sa sexualité.', 'FALSE', 'TRUE', '', './images/euphoria.jpg', '2019-10-31 05:55:11'),
+(41, 'The Umbrella Academy', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/0DAmWHxeoKw\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Action, Drame, Mystère\r\n', '12', 'Une famille de super-héros déjantés se réunit pour tenter de résoudre le mystère entourant la mort de leur père, la menace d\'une apocalypse et bien plus encore.', 'FALSE', 'TRUE', '', './images/umbrella-academy.jpg', '2019-10-31 05:57:15'),
+(42, 'Sex Education', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/o308rJlWKUc\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Comédie, Drame', '16', 'La rebelle Maeve entraîne Otis, inexpérimenté mais doté d\'une mère sexologue, dans la création d\'une cellule de thérapie sexuelle clandestine au sein de leur lycée.', 'FALSE', 'TRUE', '', './images/sex-education.jpg', '2019-10-31 05:57:15'),
+(43, 'The Haunting of hill house', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/IKTMzhpWEXQ\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Drame, Horreur, Mystère, Thriller', '16', 'Plusieurs frères et sœurs qui, enfants, ont grandi dans la demeure qui allait devenir la maison hantée la plus célèbre des États-Unis, sont contraints de se réunir pour finalement affronter les fantômes de leur passé, dont certains sont encore bien présents dans leurs esprits alors que d’autres continuent de hanter la fameuse Hill House.', 'FALSE', 'TRUE', '', './images/haunting.jpg', '2019-10-31 06:00:47'),
+(44, 'You', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/-xRXRyAScAU\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Crime, Drame, Thriller', '16', 'Joe, le propriétaire d\'une librairie new-yorkaise, devient obsédé par une de ses clientes, Beck, qui se trouve être une aspirante écrivaine. Il va alors se servir des réseaux sociaux pour no urrir son obsession, savoir où elle est et ce qu\'elle fait à tout moment, et tenter de faire tomber tous les obstacles qui pourraient se dresser en travers du chemin de leur possible romance.', 'FALSE', 'TRUE', '', './images/you.jpg', '2019-10-31 06:21:21'),
+(45, 'Another Life (2019)', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/BHxdUDFpnYM\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Drame, Science-fiction', '12', 'Lors d\'une mission ultra-risquée, l\'astronaute Niko Breckenridge et sa jeune équipe affrontent de terribles dangers pour en savoir plus sur un artefact extraterrestre.', 'FALSE', 'TRUE', '', './images/another-life.jpg', '2019-10-31 06:30:31'),
+(46, 'Chambers (2019)', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/7pnNLMPaM14\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Drame, Fantastique, Horreur', '16', 'Sasha Yazzie, 17 ans, vit avec son oncle dans une réserve amérindienne en Arizona. Après un brutal arrêt cardiaque, elle se réveille avec le cœur de Becky Lefevre, jeune fille issue d\'une fa mille riche. Quand la famille de cette dernière propose de la rencontrer, sa vie va peu à peu déraper… Est-elle victime de ses propres angoisses ? Les parents Lefevre cachent-ils quelque chose sur la mort de leur fille ? Le cœur de Becky déteint-il sur la personnalité de Sasha ?', 'FALSE', 'TRUE', '', './images/chambers.jpg', '2019-10-31 06:30:31'),
+(47, 'Chernobyl', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/s9APLXM9Ei8\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Drame, Mini-série', '16', 'Cette mini-série raconte l\'histoire vraie de la catastrophe nucléaire de Tchernobyl du 26 avril 1986 et explore les conséquences de cet événement tragique ainsi que les sacrifices qui ont dû être faits pour sauver l\'Europe du désastre.', 'FALSE', 'TRUE', '', './images/chernobyl.jpg', '2019-10-31 06:30:31'),
+(48, 'Conversations with a Killer: The Ted Bu', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/n1UJgrNRcvI\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Crime, Documentaire, Mini-série', '16', 'Des interviews récentes, des images d\'archive et des enregistrements audio dans le couloir de la mort dressent un portrait du tueur en série Ted Bundy.', 'FALSE', 'TRUE', '', './images/ted-bundy.jpg', '2019-10-31 06:30:31'),
+(49, 'Deadly Class', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_8JkjDrAlJ8\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'Action, Crime, Thriller', '12', 'À la fin des années 1980, Marcus Lopez, un jeune SDF, est admis au sein d\'une mystérieuse école privée qui accueille la progéniture des criminels les plus dangereux de la planète. Confronté à des cours pour le moins inattendus, qui font du meurtre une forme d\'art, et à des camarades de classe qui vont lui rendre la vie dure, Marcus va devoir tenter de survivre, de garder à tout prix un certain code moral, et d\'affronter du mieux qu\'il peut les aléas de sa vie d\'adolescent.', 'FALSE', 'TRUE', '', './images/deadly-class.jpg', '2019-10-31 06:30:31');
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `film`
+--
+ALTER TABLE `film`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `film`
+--
+ALTER TABLE `film`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

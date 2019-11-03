@@ -1,5 +1,6 @@
 <?php
 include './inc/functionsGallery.php';
+
 // Connect to MySQL
 $pdo = pdo_connect_mysql();
 // MySQL query that selects all the images
@@ -18,54 +19,284 @@ include './header.php' ;
 require './inc/functions.php';
 logged_only();
 ?>
-
-<div class="content home">
-<div class="start">
-<h2 style="color:red">Check out our latest movies!</h2>
-<p style="color: white">Welcome to our Movies and Series database!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="carouselExampleControlsf" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <h3 style="color:red">Favoris</h3>
+                <!-- first slide -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=50"><img src="./images/got.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=49"><img src="./images/deadly-class.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=47"><img src="./images/chernobyl.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=44"><img src="./images/you.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                            </div>
+                        </div>
+                <!-- END OF FIRST SLIDE -->
+                <!-- DEBUT DEUXIEME SLIDE -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=42"><img src="./images/sex-education.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=40"><img src="./images/euphoria.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=41"><img src="./images/umbrella-academy.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=37"><img src="./images/img37.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                            </div>
+                        </div>
+                <!-- FIN DEUXIEME SLIDE -->
+                <!-- DEBUT TROISIEME SLIDE -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=48"><img src="./images/ted-bundy.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=46"><img src="./images/chambers.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=43"><img src="./images/haunting.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=39"><img src="./images/raising-dion.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                            </div>
+                        </div>
+                <!-- FIN TROISIEME SLIDE -->
+                </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControlsf" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControlsf" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="images">
-<?php foreach ($images as $image): ?>
-<a href="comments.php?id=<?php echo $image['id'] ?>">
-<img src="<?=$image['path']?>" alt="<?=$image['genre']?>" data-id="<?=$image['id']?>" data-title="<?=$image['title']?>" width="300" height="200">
-<span><?=$image['genre']?></span>
-</a>
-<?php endforeach; ?>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="carouselExampleControls4" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <h3 style="color:red">Fantastique</h3>
+                <!-- first slide -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=37"><img src="./images/img37.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=46"><img src="./images/chambers.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=41"><img src="./images/umbrella-academy.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=39"><img src="./images/raising-dion.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                            </div>
+                        </div>
+                <!-- END OF FIRST SLIDE -->
+                <!-- DEBUT DEUXIEME SLIDE -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=35"><img src="./images/img35.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=36"><img src="./images/img36.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=45"><img src="./images/another-life.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=50"><img src="./images/got.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                            </div>
+                        </div>
+                <!-- FIN DEUXIEME SLIDE -->
+                <!-- DEBUT TROISIEME SLIDE -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=49"><img src="./images/deadly-class.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=39"><img src="./images/raising-dion.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=37"><img src="./images/img37.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=46"><img src="./images/chambers.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                            </div>
+                        </div>
+                <!-- FIN TROISIEME SLIDE -->
+                </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls4" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls4" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
+            </div>
+        </div>
+    </div>
 </div>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="carouselExampleControls5" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <h3 style="color:red">Comedie</h3>
+                <!-- first slide -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=51"><img src="./images/img51.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=52"><img src="./images/img52.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=53"><img src="./images/img53.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=54"><img src="./images/img54.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                            </div>
+                        </div>
+                <!-- END OF FIRST SLIDE -->
+                <!-- DEBUT DEUXIEME SLIDE -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=55"><img src="./images/img55.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=56"><img src="./images/img56.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=57"><img src="./images/img57.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=58"><img src="./images/img58.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                            </div>
+                        </div>
+                <!-- FIN DEUXIEME SLIDE -->
+                <!-- DEBUT TROISIEME SLIDE -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=42"><img src="./images/sex-education.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=37"><img src="./images/img37.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=35"><img src="./images/img35.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="comments.php?id=41"><img src="./images/umbrella-academy.jpg"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
+                                </div>
+                            </div>
+                        </div>
+                <!-- FIN TROISIEME SLIDE -->
+                </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls5" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls5" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="image-popup"></div>
 
-<!-- JS -->
-<script>
-// Container we'll use to show an image
-let image_popup = document.querySelector('.image-popup');
-// Loop each image so we can add the on click event
-document.querySelectorAll('.images a').forEach(img_link => {
-img_link.onclick = e => {
-e.preventDefault();
-let img_meta = img_link.querySelector('img');
-let img = new Image();
-img.onload = () => {
-// Create the pop out image
-//MAKE A LINK bn watch now and trailer page!!!
-image_popup.innerHTML = `
-
-<h3>${img_meta.dataset.title}</h3>
-<p>${img_meta.alt}</p>
-
-Hide the image popup container if user clicks outside the image
-image_popup.onclick = e => {
-if (e.target.className == 'image-popup') {
-image_popup.style.display = "none";
-}
-};
-</script>
-
-<!-- FOOTER PHP-->
-<!-- < ?=template_footer()?> -->
-
-<!-- FOOTER PHP -->
 <?php
 include './footer.php';
 ?>
-
