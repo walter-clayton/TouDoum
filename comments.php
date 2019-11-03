@@ -12,7 +12,7 @@ logged_only();
 <!-- section-->
 <?php
 // $bdd = new PDO('mysql:host=sql313.epizy.com;dbname=epiz_24666170_toudoum;charset=utf8','epiz_24666170','85qoY1Qs5WCAC7W');
-$pdo = new PDO ('mysql:dbname=GetFlix;host=localhost', 'root', '');
+$pdo = new PDO ('mysql:dbname=GetFlix;host=localhost', 'root', 'root');
 /* if ($bdd->connect_error) {
 
 die("Connection failed: " . $bdd->connect_error);

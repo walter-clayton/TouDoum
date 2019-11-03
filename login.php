@@ -39,7 +39,7 @@ if(isset($_POST['username'])&& isset($_POST['password'])){
 <form action="" method="POST" class="form-login">
     <h2>Se connecter</h2>
     <div class="form-group">
-        <label for="">Username</label><br>
+        <label for="">Pseudonyme</label><br>
         <input type="text" name="username" required/>
     </div>
     <div class="form-group">
@@ -48,7 +48,7 @@ if(isset($_POST['username'])&& isset($_POST['password'])){
     </div>
     <div class="form-group">
         <label>
-            <input type="checkbox" name="remember" value="1"/>Se souvenir de moi
+            <input type="checkbox" name="remember" value="1"/> Se souvenir de moi 
         </label>
         <a href="./forget.php"><br>Mot de passe oublié.</a>
     </div>

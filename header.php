@@ -18,10 +18,10 @@ session_start();
 
 <body>
     <!-- HEADER -->
-    <div class="container-header-section">
+<div class="container-header-section">
 <header class="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="./index.php"><img src="./images/Logo-TouDoum.png" alt="logo" id="logo"></a>
+    <!-- <a href="./index.php"><img src="./images/Logo-TouDoum.png" alt="logo" id="logo"></a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
             aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,12 +38,12 @@ session_start();
                 <li class="nav-item">
                     <a href="./series.php" class="btn btn-rounded" style="margin:5">Series</a>
                 </li>
+                <li class="nav-item" style="margin-right:100">
+                    <a href="gallery.php" class="btn btn-rounded" style="margin:5">Search</a>
+                </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" style="margin-right:100">
-                <a href="gallery.php" class="btn btn-outline-success my-2 my-sm-0">Search</a>
-            </form>
-            </div>
-    <div class="signIn">
+            
+        </div>
     <div class="signIn">
         <?php if (isset($_SESSION['auth'])): ?>
             <a href="./account.php" class="btn btn-rounded-user"><span>Account</span>

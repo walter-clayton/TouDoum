@@ -1,7 +1,7 @@
 <!-- End of section -->
-
-</section>
-    </div>
+</div>
+    </section>
+ 
 
 <!-- Footer -->
  <footer class="footer">
@@ -13,7 +13,6 @@
         <a href="#"><i class="fab fa-twitter-square fa-3x"></i></a>
     </div>
     <br>
-    
     <div class="footer-cols">
         <ul>
             <li><a href="#">FAQ</a></li>
