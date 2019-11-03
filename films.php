@@ -19,327 +19,284 @@ include './header.php' ;
 require './inc/functions.php';
 logged_only();
 ?>
-<!-- SECTION-->
-<section>
-<h3 style="color:red"> TouDoum</h3>
-    <br />
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-
-                <div id="imageCarousel" class="carousel slide" data-interval="6000" data-ride="carousel"
-                    data-pause="hover" data-wrap="true">
-
-                    <ol class="carousel-indicators">
-                        <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#imageCarousel" data-slide-to="1"></li>
-                        <li data-target="#imageCarousel" data-slide-to="2"></li>
-                        <!--                         <li data-target="#imageCarousel" data-slide-to="3"></li> -->
-                    </ol>
-
-                    <div class="carousel-inner">
-                        <!-- Series 1 -->
-                        <div class="item active">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="carouselExampleControlsf" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <h3 style="color:red">Favoris</h3>
+                <!-- first slide -->
+                        <div class="carousel-item active">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                    <img src="./images/transparent.png">
                                 </div>
                                 <div class="col-md-2">
-                                    <a href="comments.php?id=1"><img src="./images/img1.jpg" class="img-responsive"></a>
+                                    <a href="comments.php?id=1"><img src="./images/img1.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img2.jpg" class="img-responsive">
+                                    <a href="comments.php?id=25"><img src="./images/img25.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img3.jpg" class="img-responsive">
+                                    <a href="comments.php?id=14"><img src="./images/img14.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img4.jpg" class="img-responsive">
+                                    <a href="comments.php?id=21"><img src="./images/img21.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                    <img src="./images/transparent.png">
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Series 2 -->
-                        <div class="item">
+                <!-- END OF FIRST SLIDE -->
+                <!-- DEBUT DEUXIEME SLIDE -->
+                        <div class="carousel-item">
                             <div class="row">
-                            <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img5.jpg" class="img-responsive">
+                                    <a href="comments.php?id=24"><img src="./images/img27.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img6.jpg" class="img-responsive">
+                                    <a href="comments.php?id=28"><img src="./images/img28.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img7.jpg" class="img-responsive">
+                                    <a href="comments.php?id=29"><img src="./images/img29.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img8.jpg" class="img-responsive">
+                                    <a href="comments.php?id=33"><img src="./images/img33.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                    <img src="./images/transparent.png">
                                 </div>
                             </div>
                         </div>
-                        <!-- series 2 -->
-                        <div class="item">
+                <!-- FIN DEUXIEME SLIDE -->
+                <!-- DEBUT TROISIEME SLIDE -->
+                        <div class="carousel-item">
                             <div class="row">
-                            <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img9.jpg" class="img-responsive">
+                                    <a href="comments.php?id=5"><img src="./images/img5.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img10.jpg" class="img-responsive">
+                                    <a href="comments.php?id=9"><img src="./images/img9.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img11.jpg" class="img-responsive">
+                                    <a href="comments.php?id=8"><img src="./images/img8.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img12.jpg" class="img-responsive">
+                                    <a href="comments.php?id=4"><img src="./images/img4.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                    <img src="./images/transparent.png">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- END OF SERIES -->
-
-                    <!-- NAVIGATION -->
-                    <a href="#imageCarousel" class="carousel-control left" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a href="#imageCarousel" class="carousel-control right" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
+                <!-- FIN TROISIEME SLIDE -->
                 </div>
-
+                    <a class="carousel-control-prev" href="#carouselExampleControlsf" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControlsf" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
             </div>
         </div>
     </div>
-    </section>
-    <section>
-        <!-- SECTION-->
-<h3 style="color:red"> TouDoum</h3>
-    <br />
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-
-                <div id="imageCarousel2" class="carousel slide" data-interval="6000" data-ride="carousel"
-                    data-pause="hover" data-wrap="true">
-
-                    <ol class="carousel-indicators">
-                        <li data-target="#imageCarousel2" data-slide-to="0" class="active"></li>
-                        <li data-target="#imageCarousel2" data-slide-to="1"></li>
-                        <li data-target="#imageCarousel2" data-slide-to="2"></li>
-                        <!--                         <li data-target="#imageCarousel" data-slide-to="3"></li> -->
-                    </ol>
-
-                    <div class="carousel-inner">
-                        <!-- Series 1 -->
-                        <div class="item active">
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <h3 style="color:red">Drame</h3>
+                <!-- first slide -->
+                        <div class="carousel-item active">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                    <img src="./images/transparent.png">
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img1.jpg" class="img-responsive">
+                                    <a href="comments.php?id=2"><img src="./images/img2.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img2.jpg" class="img-responsive">
+                                    <a href="comments.php?id=3"><img src="./images/img3.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img3.jpg" class="img-responsive">
+                                    <a href="comments.php?id=4"><img src="./images/img4.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img4.jpg" class="img-responsive">
+                                    <a href="comments.php?id=6"><img src="./images/img6.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                    <img src="./images/transparent.png">
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Series 2 -->
-                        <div class="item">
+                <!-- END OF FIRST SLIDE -->
+                <!-- DEBUT DEUXIEME SLIDE -->
+                        <div class="carousel-item">
                             <div class="row">
-                            <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img5.jpg" class="img-responsive">
+                                    <a href="comments.php?id=7"><img src="./images/img7.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img6.jpg" class="img-responsive">
+                                    <a href="comments.php?id=8"><img src="./images/img8.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img7.jpg" class="img-responsive">
+                                    <a href="comments.php?id=9"><img src="./images/img9.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img8.jpg" class="img-responsive">
+                                    <a href="comments.php?id=12"><img src="./images/img12.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                    <img src="./images/transparent.png">
                                 </div>
                             </div>
                         </div>
-                        <!-- series 2 -->
-                        <div class="item">
+                <!-- FIN DEUXIEME SLIDE -->
+                <!-- DEBUT TROISIEME SLIDE -->
+                        <div class="carousel-item">
                             <div class="row">
-                            <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img9.jpg" class="img-responsive">
+                                    <a href="comments.php?id=2"><img src="./images/img2.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img10.jpg" class="img-responsive">
+                                    <a href="comments.php?id=3"><img src="./images/img3.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img11.jpg" class="img-responsive">
+                                    <a href="comments.php?id=4"><img src="./images/img4.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img12.jpg" class="img-responsive">
+                                    <a href="comments.php?id=6"><img src="./images/img6.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                    <img src="./images/transparent.png">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- END OF SERIES -->
-
-                    <!-- NAVIGATION -->
-                    <a href="#imageCarousel2" class="carousel-control left" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a href="#imageCarousel2" class="carousel-control right" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
+                <!-- FIN TROISIEME SLIDE -->
                 </div>
-
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
             </div>
         </div>
     </div>
-    </section>
-
-    <section>
-        <!-- SECTION-->
-<h3 style="color:red"> TouDoum</h3>
-    <br />
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-
-                <div id="imageCarousel3" class="carousel slide" data-interval="6000" data-ride="carousel"
-                    data-pause="hover" data-wrap="true">
-
-                    <ol class="carousel-indicators">
-                        <li data-target="#imageCarousel3" data-slide-to="0" class="active"></li>
-                        <li data-target="#imageCarousel3" data-slide-to="1"></li>
-                        <li data-target="#imageCarousel3" data-slide-to="2"></li>
-                        <!--                         <li data-target="#imageCarousel" data-slide-to="3"></li> -->
-                    </ol>
-
-                    <div class="carousel-inner">
-                        <!-- Series 1 -->
-                        <div class="item active">
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <h3 style="color:red">Thriller</h3>
+                <!-- first slide -->
+                        <div class="carousel-item active">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                    <img src="./images/transparent.png">
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img1.jpg" class="img-responsive">
+                                    <a href="comments.php?id=5"><img src="./images/img5.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img2.jpg" class="img-responsive">
+                                    <a href="comments.php?id=6"><img src="./images/img6.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img3.jpg" class="img-responsive">
+                                    <a href="comments.php?id=13"><img src="./images/img13.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img4.jpg" class="img-responsive">
+                                    <a href="comments.php?id=14"><img src="./images/img14.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                    <img src="./images/transparent.png">
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Series 2 -->
-                        <div class="item">
+                <!-- END OF FIRST SLIDE -->
+                <!-- DEBUT DEUXIEME SLIDE -->
+                        <div class="carousel-item">
                             <div class="row">
-                            <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img5.jpg" class="img-responsive">
+                                    <a href="comments.php?id=7"><img src="./images/img7.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img6.jpg" class="img-responsive">
+                                    <a href="comments.php?id=8"><img src="./images/img8.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img7.jpg" class="img-responsive">
+                                    <a href="comments.php?id=9"><img src="./images/img9.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img8.jpg" class="img-responsive">
+                                    <a href="comments.php?id=12"><img src="./images/img12.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                    <img src="./images/transparent.png">
                                 </div>
                             </div>
                         </div>
-                        <!-- series 2 -->
-                        <div class="item">
+                <!-- FIN DEUXIEME SLIDE -->
+                <!-- DEBUT TROISIEME SLIDE -->
+                        <div class="carousel-item">
                             <div class="row">
-                            <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                <div class="col-md-2">
+                                    <img src="./images/transparent.png">
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img9.jpg" class="img-responsive">
+                                    <a href="comments.php?id=12"><img src="./images/img12.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img10.jpg" class="img-responsive">
+                                    <a href="comments.php?id=6"><img src="./images/img6.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img11.jpg" class="img-responsive">
+                                    <a href="comments.php?id=4"><img src="./images/img4.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="./images/img12.jpg" class="img-responsive">
+                                    <a href="comments.php?id=9"><img src="./images/img9.jpg"></a>
                                 </div>
                                 <div class="col-md-2">
-                                    <img src="" class="img-responsive">
+                                    <img src="./images/transparent.png">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- END OF SERIES -->
-
-                    <!-- NAVIGATION -->
-                    <a href="#imageCarousel3" class="carousel-control left" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a href="#imageCarousel3" class="carousel-control right" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
+                <!-- FIN TROISIEME SLIDE -->
                 </div>
-
+                    <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
             </div>
         </div>
     </div>
-    </section>
+</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-<!-- FOOTER PHP -->
 <?php
 include './footer.php';
 ?>
-
