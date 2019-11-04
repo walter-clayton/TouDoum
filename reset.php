@@ -7,6 +7,7 @@
         $user = $req->fetch();
         if($user){
             if(!empty($_POST)){
+                // changement du mdp après validation token
                 if(!empty($_POST['password']) && $_POST['password'] == $_POST['password_confirm']){
                     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
                     $pdo->prepare('UPDATE users SET password = ?, reset_at = NULL, reset_token = NULL WHERE id = ?')->execute([$password, $_GET['id']]);

@@ -59,7 +59,7 @@ session_start();
 </header>
 
 <section class="page">
-
+<!-- Affichage des messages d'alerte -->
 <?php if(isset($_SESSION['flash'])): ?>
     <?php foreach($_SESSION['flash'] as $type => $message):?>
         <div class="alert alert-<?= $type; ?>">

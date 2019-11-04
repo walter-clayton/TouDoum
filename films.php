@@ -2,7 +2,7 @@
 include './inc/functionsGallery.php';
 
 // Connect to MySQL
-$pdo = pdo_connect_mysql();
+// $pdo = pdo_connect_mysql();
 // MySQL query that selects all the images
 $stmt = $pdo->query('SELECT * FROM film ORDER BY uploaded_date DESC');
 $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -25,7 +25,7 @@ logged_only();
             <div id="carouselExampleControlsf" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                 <h3 style="color:red">Favoris</h3>
-                <!-- first slide -->
+                <!-- DEBUT PREMIER SLIDE-->
                         <div class="carousel-item active">
                             <div class="row">
                                 <div class="col-md-2">
@@ -48,7 +48,7 @@ logged_only();
                                 </div>
                             </div>
                         </div>
-                <!-- END OF FIRST SLIDE -->
+                <!-- FIN PREMIER SLIDE -->
                 <!-- DEBUT DEUXIEME SLIDE -->
                         <div class="carousel-item">
                             <div class="row">

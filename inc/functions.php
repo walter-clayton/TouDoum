@@ -4,11 +4,12 @@ function debug($variable){
 
     echo '<pre>' . print_r($variable, true) . '</pre>';
 }
+//Fonction qui mélange les caractères
 function str_random($length){
     $alphabet = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
     return substr(str_shuffle(str_repeat($alphabet, $length)), 0, $length);
 }
-
+//Permet d'afficher un message d'erreur si on n'est pas connecter
 function logged_only(){
     if(session_status() == PHP_SESSION_NONE){
         session_start();
@@ -19,7 +20,7 @@ function logged_only(){
         exit();
     }
 }
-
+// Reconnection si cookie existant
 function reconnect_from_cookie(){
     if(session_status() == PHP_SESSION_NONE){
         require_once 'db.php';

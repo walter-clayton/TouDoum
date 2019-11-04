@@ -1,6 +1,6 @@
 <?php require './inc/functions.php'; ?>
 <?php logged_only();
-
+// Changement de mot de passe
 if(!empty($_POST)){
     if(!empty($_POST['password']) && $_POST['password'] == $_POST['password_confirm']){
         require_once 'inc/db.php';
@@ -12,6 +12,7 @@ if(!empty($_POST)){
     }
 }
 ?>
+<!-- Affiche les informations du compte dans la section account -->
 <?php require './header.php'; ?>
 <div class="account">
     <h2>Information du compte</h2>

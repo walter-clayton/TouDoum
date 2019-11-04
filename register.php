@@ -1,6 +1,7 @@
 <?php require './inc/functions.php'; ?>
 <?php require './header.php'; ?>
 <?php 
+    // si déjà connecter redirige vers index.php
     if(isset($_SESSION['auth'])){
         header('Location: index.php'); 
     }
@@ -13,21 +14,22 @@ $errors = array();
 
 require_once './inc/db.php';
 
+// Champ prénom : condition d'erreur : si firstname vide ou si il contient autre chose que [a-zA-Z] erreur
 if(empty($_POST['firstname']) || !preg_match('/^[a-zA-Z]+$/', $_POST['firstname'])){
     $errors['firstname'] = "Votre prénom n'est pas valide";
 }
-
+// idem que prénom 
 if(empty($_POST['surname']) || !preg_match('/^[a-zA-Z]+$/', $_POST['surname'])){
     $errors['surname'] = "Votre nom n'est pas valide";
 }
-
+// idem mais en autorisant [a-zA-Z0-9_]
 if(empty($_POST['username']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['username'])){
     $errors['username'] = "Votre pseudonyme n'est pas valide";
 } else{
 
     $req = $pdo->prepare('SELECT id FROM users WHERE username = ?');
     $req->execute([$_POST['username']]);
-    $user = $req->fetch(); // permet de récuperer le première enregistrement
+    $user = $req->fetch(); // permet de récuperer le dernier enregistrement
 
     if($user){
         $errors['username'] = 'Ce pseudonyme est déjà pris';
@@ -60,10 +62,12 @@ if(($_POST['password']) != $_POST['password_confirm']){
 if(empty($_POST['age']) || !preg_match('/^[0-9]+$/', $_POST['age'])){
     $errors['age'] = "Votre âge n'est pas valide";
 }
+//fin de vérification
 
 if(empty($errors)){
 
 require_once './inc/db.php';
+// insertion des informations dans la DB
 $req = $pdo->prepare("INSERT INTO users SET firstname = ?, surname = ?, username = ?, email = ?, password = ?, age = ?");
 $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 $req->execute([$_POST['firstname'], $_POST['surname'], $_POST['username'], $_POST['email'], $password, $_POST['age']]);

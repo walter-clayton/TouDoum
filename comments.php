@@ -13,17 +13,14 @@ logged_only();
 <?php
 $bdd = new PDO('mysql:host=sql313.epizy.com;dbname=epiz_24666170_toudoum;charset=utf8','epiz_24666170','85qoY1Qs5WCAC7W');
 // $pdo = new PDO ('mysql:dbname=GetFlix;host=localhost', 'root', '');
-/* if ($bdd->connect_error) {
 
-die("Connection failed: " . $bdd->connect_error);
-}
-echo "Connected successfully"; */
-
+// Prepares the correct film to comment on - using dynamic ID
 if(isset($_GET['id']) AND !empty($_GET['id'])) {
 $getid = htmlspecialchars($_GET['id']);
 $films = $pdo->prepare('SELECT * FROM film WHERE id = ?');
 $films->execute(array($getid));
 $films = $films->fetch();
+
 if(isset($_POST['submit_commentaire'])) {
 if(isset($_POST['nickname'],$_POST['comment']) AND !empty($_POST['nickname']) AND !empty($_POST['comment'])) {
 $pseudo = htmlspecialchars($_POST['nickname']);

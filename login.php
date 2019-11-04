@@ -6,19 +6,23 @@
     }
 ?>
 <?php
+// Creation des conditions pour se connecter
 if(isset($_POST['username'])&& isset($_POST['password'])){
     if(!empty($_POST['username']) && !empty($_POST['password'])){
         require_once './inc/db.php';
         require_once './inc/functions.php';
         $req = $pdo->prepare('SELECT id , username , password FROM users WHERE username = :username');
+        //username prend la valeur $_POST['username']
         $req->execute(['username' => $_POST['username']]);
-        $user = $req->fetch(); // permet de récuperer le première enregistrement
-        '<div class="formsize>';
-        '<div class="formradius">';
+        $user = $req->fetch(); // permet de récuperer le dernier enregistrement
+            '<div class="formsize>';
+            '<div class="formradius">';
+            //verify if user and password exist and are correct
         if($user && (password_verify($_POST['password'], $user->password))){
             $_SESSION['auth'] = $_POST['username'];
             echo $_SESSION['auth'];
             $_SESSION['flash']['success'] = "Connexion réussi";
+            // Cookie pour se rappeler des connections
             if($_POST['remember']){
                 $remember_token = str_random(250);
                 $pdo->prepare('UPDATE users SET remember_token = ? WHERE id = ?')-> execute([$remember_token, $user->id]);
