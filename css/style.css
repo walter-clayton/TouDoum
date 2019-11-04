@@ -346,9 +346,9 @@ opacity: 0.7;
 	/* responsive gallery in mobile view */
 
 	.home .images {
-		display: flex;
+		/* display: flex; */
 	/* 	flex-direction: column;	 */
-		margin: 5px;
+		/* margin: 5px; */
 	}
 	/* Paras in the page */
 	.start h2{
