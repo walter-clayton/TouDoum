@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Oct 30, 2019 at 08:49 AM
--- Server version: 5.7.26
--- PHP Version: 7.2.18
+-- Hôte : localhost
+-- Généré le :  Dim 03 nov. 2019 à 14:27
+-- Version du serveur :  10.4.6-MariaDB
+-- Version de PHP :  7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,34 +19,41 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `toudoum`
+-- Base de données :  `GetFlix`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `espace_membre`
+-- Structure de la table `espace_membre`
 --
 
-DROP TABLE IF EXISTS `espace_membre`;
-CREATE TABLE IF NOT EXISTS `espace_membre` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `espace_membre` (
+  `id` int(11) NOT NULL,
   `nickname` varchar(255) NOT NULL,
   `comment` text NOT NULL,
-  `id_film` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin2;
+  `id_film` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin2;
 
 --
--- Dumping data for table `espace_membre`
+-- Index pour les tables déchargées
 --
 
-INSERT INTO `espace_membre` (`id`, `nickname`, `comment`, `id_film`) VALUES
-(1, 'dfd', 'dfd', 2),
-(2, 'xcx', 'xcxcx', 3),
-(3, 'AlexT', 'Really Good movie!', 2),
-(4, 'fgfg', 'fgfgf', 5),
-(5, 'Nina', 'It is here.', 5);
+--
+-- Index pour la table `espace_membre`
+--
+ALTER TABLE `espace_membre`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `espace_membre`
+--
+ALTER TABLE `espace_membre`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

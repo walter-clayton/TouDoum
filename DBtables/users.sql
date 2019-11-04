@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  mer. 30 oct. 2019 à 09:46
+-- Généré le :  Dim 03 nov. 2019 à 14:27
 -- Version du serveur :  10.4.6-MariaDB
 -- Version de PHP :  7.3.9
 
@@ -42,20 +42,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `users`
---
-
-INSERT INTO `users` (`id`, `firstname`, `surname`, `username`, `email`, `password`, `age`, `reset_token`, `reset_at`, `remember_token`) VALUES
-(24, 'qsd', 'qsd', 'qsd', 'qsd@hotmail.com', '$2y$10$VtC40CX5AedPPTDO6N2vU.ajgz416SbFjQPsNhSG7ZLzye1XiQhHG', 22, '', '2019-10-29 12:26:02', NULL),
-(25, 'koko', 'koko', 'koko', 'kok@hotmail.Com', '$2y$10$WA5w9I1e8rTF9j.Lz.2sYeNtaqB/twrdyj7tqUsdkEnvV1WS.jo16', 22, NULL, NULL, 'zn7n8ZU6Stax9HoSqPkWqzaoZ5TGSSP4laplLr3TopD8tjTfOioDkOEb7YMqTg8gZUs1blMs2OMGGzcWvjFmpAG3cWk0Tz5CRIOetEhR1NqtfUvfN4cO32fa5yLjBJkmHbrp4Vfmo5wvZdU0WKQZR2nh8KF4wZLOgB3i6u565vXAvG226EQ3nmYxd8iYxSG1fwFTD01Hn1fxjQyLUFcVxFtNm1bq7dOvG517WJQY8dLK59eKtPKx6zSup1'),
-(26, 'popo', 'popo', 'popo', 'popo@hotmail.com', '$2y$10$ky.4qJGkh7qwFzzMHv6K4Oe1LFcNvKMbqx7XvNSVWLwkG6Ak8e3da', 22, '0XcofM8rT8AJrThQpSwRsFGlUA9JbMKeHSu2ZdGTot3PyW3f75ejDl3l2pbS', '2019-10-29 09:25:23', NULL),
-(27, 'szsz', 'szsz', 'szsz', 'szsz@houj.com', '$2y$10$GdKNbSerSojKyH/F9YG3g.ZRJloJyz/AD9BHqYot2sx4EYS5Et6Q.', 58, NULL, NULL, NULL),
-(28, 'memo', 'memo', 'memo', 'ozcan.mehmet@outlook.fr', '$2y$10$ZDVPE8AxSNh7B94AAevNaOX.r7hArG/KK0NqscOkzlp7aFaPFhoaa', 22, NULL, NULL, 'go1f0K1J3C0CVx90ijV5eIKqRZVUiEUS0VCt1udxopdJ0JME7AaSQeZNs2iTiWiFPhQK11HB3T3k69KuA6tfJI8zGizjJD6odluRn64WtQOFy3sJREbPZvthdLeiL0bFQ5VyKs1NIfkZi1Jx8vyETzqx9kGXm8RpiHYFUdNCeD6mytsjvWCaElUfAJDM4scHf0wp3gwTitcLEc8idbvtDd20liFeizXK4gBlfrzTsQtpxyOTIMAwJAWHFk'),
-(29, 'tutu', 'tutu', 'tutu', 'tutu@hotmail.com', '$2y$10$e8gEPJtLlJQSpNp2/93qiucmQVikhDu.ye0.HexFi/2PKk/sU8HTm', 22, NULL, NULL, NULL),
-(30, 'eueu', 'eueu', 'eueu', 'eueu@hotmail.com', '$2y$10$0nT6Vj48CgFNuySicFRg8evndDbDJ.AKMlMZhL5tCzSGoN09iiT8O', 22, NULL, NULL, NULL),
-(31, 'dhdh', 'dhdh', 'dhdh', 'dhdh@hotmail.com', '$2y$10$GCHG56VL4QhMw/g7MUdbQ.Tu2rjf2NpMcq11t2yf/gyaGRxDD47Ra', 22, NULL, NULL, NULL);
-
---
 -- Index pour les tables déchargées
 --
 
@@ -73,7 +59,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
