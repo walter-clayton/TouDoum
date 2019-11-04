@@ -2,7 +2,7 @@
 include './inc/db.php';
 include './inc/functionsGallery.php';
 // Connect to MySQL
-// $pdo = pdo_connect_mysql();
+$pdo = pdo_connect_mysql();
 // MySQL query that selects all the images
 $stmt = $pdo->query('SELECT * FROM film ORDER BY uploaded_date DESC');
 $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
