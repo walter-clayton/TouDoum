@@ -11,8 +11,8 @@ logged_only();
 
 <!-- section-->
 <?php
-$bdd = new PDO('mysql:host=sql313.epizy.com;dbname=epiz_24666170_toudoum;charset=utf8','epiz_24666170','85qoY1Qs5WCAC7W');
-// $pdo = new PDO ('mysql:dbname=GetFlix;host=localhost', 'root', '');
+// $pdo = new PDO('mysql:host=sql313.epizy.com;dbname=epiz_24666170_toudoum;charset=utf8','epiz_24666170','85qoY1Qs5WCAC7W');
+$pdo = new PDO ('mysql:dbname=GetFlix;host=localhost', 'root', '');
 
 // Prepares the correct film to comment on - using dynamic ID
 if(isset($_GET['id']) AND !empty($_GET['id'])) {
