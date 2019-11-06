@@ -29,7 +29,7 @@
 
 	</div>	
 	<div>
-		<input type="submit" name="submit" onclick="promo()">
+		<input type="submit" name="submit" onclick="promo()" >
 	</div>
 
 
@@ -37,7 +37,8 @@
 		<h2>REDUCTION <span id = "reductionresult"></span></h2><hr>
 		<h2>DELIVERY <span id = "deliveryresult"></span></h2><hr>
 		<h2>PROMO <span id = "promoresult"></span></h2><hr>
-	
+		<h1 ><span>	TOTAL PRICE + DEDUCTIONS </span><p id="totaldeduct" ></p></h1><hr>
+
 <div>
 </div>
 
@@ -53,29 +54,27 @@ const select = document.getElementById("lol");
 var val = parseInt(document.getElementById("showamount").value);
 console.log(val);
 	val++
-var priceshow = parseInt(document.getElementById("priceshow").value);
-console.log(priceshow);
 	price = 10;
 var pricetotal = price * val;
 console.log(pricetotal)
 
 if (val >= 5) {
 
-		var reduction =  (pricetotal - (pricetotal * 5/100)) + " -5% " ;
-		console.log(reduction)
-		document.getElementById("reductionresult").value = reduction;
-		document.getElementById("reductionresult").innerHTML = reduction;
+		var reductionshow =  " -5% " ;
+		document.getElementById("reductionresult").innerHTML = reductionshow;
+
 
 		}
 
 
-	var priceshow = pricetotal;
 document.getElementById("pricetotal").innerHTML = pricetotal;
+document.getElementById("pricetotal").value = pricetotal;
 document.getElementById("showamount").value = val;
-document.getElementById("priceshow").innerHTML = priceshow;
+
 
 	}
 
+add();
 
 
 select.onchange = function() {
@@ -112,10 +111,11 @@ document.getElementById("deliveryresult").innerHTML = addition;
 		var promo = document.getElementById("promo").value;
 		console.log(promo)
 
-
 			if ('MikeEstTropCool' == promo) {
 				console.log("you get 10% reduction")
 			document.getElementById("promoresult").innerHTML = "you get 10% reduction";
+			document.getElementById("promoresult").value = 10/100;
+			var mikereduc = document.getElementById("promoresult").value;
 
 			}
 
@@ -125,6 +125,24 @@ document.getElementById("deliveryresult").innerHTML = addition;
 
 			}
 	}
+
+
+		document.getElementById("pricetotal").value = pricetotal;
+		pricetotal = document.getElementById("priceshow").value;
+
+		document.getElementById("reductionresult").value = 5/100;
+
+		var reduction = document.getElementById("reductionresult").value;
+		console.log(reduction);
+
+		var currentoption = select.options[select.selectedIndex].value;
+
+promo();
+
+		var totaldeduct = pricetotal +  (pricetotal * mikereduc)
+		console.log(totaldeduct);
+		document.getElementById("totaldeduct").innerHTML = totaldeduct;
+
 
 </script>
 
