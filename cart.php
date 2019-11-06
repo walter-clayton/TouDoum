@@ -1,7 +1,4 @@
 <!-- HEADER -->
-<?php
-include('./header.php');
-?>
 
 
 <!DOCTYPE html>
@@ -64,9 +61,11 @@ console.log(pricetotal)
 
 if (val >= 5) {
 
-		var reduction =  (pricetotal - (pricetotal * 5/100))+ " you get 5% reduction " ;
+		var reduction =  (pricetotal - (pricetotal * 5/100)) + " -5% " ;
 		console.log(reduction)
 		document.getElementById("reductionresult").value = reduction;
+		document.getElementById("reductionresult").innerHTML = reduction;
+
 		}
 
 
@@ -74,7 +73,6 @@ if (val >= 5) {
 document.getElementById("pricetotal").innerHTML = pricetotal;
 document.getElementById("showamount").value = val;
 document.getElementById("priceshow").innerHTML = priceshow;
-document.getElementById("reductionresult").innerHTML = reduction;
 
 	}
 
@@ -84,23 +82,26 @@ select.onchange = function() {
 
 var  pricetotalCountry = document.getElementById("pricetotal").innerHTML;
 
-
-	var belgium = document.getElementById("belgium").value;
-var addition = (pricetotalCountry + currentoption) + " FREE DELIVERY";
-
-var eu = document.getElementById("eu").value;
-var addition = (pricetotalCountry + currentoption) + " $2.5 FEE DELIVERY";
-
-var other = document.getElementById("other").value;
-var addition = (pricetotalCountry + currentoption) + " $5 FEE DELIVERY";
-
-
-document.getElementById("deliveryresult").innerHTML = currentoption;
-
 var currentoption = select.options[select.selectedIndex].value;
 console.log(currentoption);
+document.getElementById("deliveryresult").innerHTML = currentoption;
+
+if (currentoption === "0") {
+	var addition = " FREE";
+}
+
+else if (currentoption === "2.5"){
+	var addition = " +$2.5";
+}
+
+else {
+
+var addition = " +$5";
+
+}
 
 
+document.getElementById("deliveryresult").innerHTML = addition;
 
 	}
 
@@ -120,7 +121,7 @@ console.log(currentoption);
 
 			else {
 			console.log("wrong PROMOCODE")
-			document.getElementById("promoresult").innerHTML = "wrong PROMOCODE";
+			document.getElementById("promoresult").innerHTML = "WRONG CODE";
 
 			}
 	}
