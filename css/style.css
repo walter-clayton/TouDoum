@@ -298,6 +298,22 @@ opacity: 0.7;
 .changemdp {
 	width: 60%;
 }
+/*cart*/
+#continuer{
+	color: #000;
+    text-decoration: underline;
+	
+}
+thead{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+
+}
+
 
 /* RESPONSIVE */
 /*Responsiveness, media query: put flex from rows to columns (container divs)*/

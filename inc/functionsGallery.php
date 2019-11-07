@@ -7,7 +7,7 @@ function pdo_connect_mysql() {
 // $DATABASE_NAME = 'epiz_24666170_toudoum';
 //LOCALHOST MEHMET //
 $DATABASE_HOST='localhost';
-$DATABASE_NAME="GetFlix";
+$DATABASE_NAME="toudoum";
 $DATABASE_PASS="";
 $DATABASE_USER="root";
 try {
