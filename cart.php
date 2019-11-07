@@ -9,7 +9,8 @@
 <body>
 
 <div>
-    <img src="./images/img1.jpg"></div>
+    <img src="./images/img1.jpg">
+</div>
         <input type="text" id="priceshow" value="10">
         <div>
         	<input type="text" id="showamount" value="0">
@@ -47,46 +48,45 @@
 <button onclick = "clickTotal()">DEDUCT TOTAL</button>
 <script type="text/javascript">
 
+
 const select = document.getElementById("lol");
 
 
-function plus() {
-
-var val = parseInt(document.getElementById("showamount").value);
-console.log(val);
-val++
-if (val < 5) {
-price = 10;
-}
-else {
-var reductionshow = " -5% " ;
-document.getElementById("reductionresult").innerHTML = reductionshow;
-price = 9.5;
-}
-
-var pricetotal = price * val;
-console.log(pricetotal)
-
-    
-    var totaldeduct = pricetotal;
-    console.log(totaldeduct);
-    document.getElementById("totaldeduct").innerHTML = totaldeduct;
 document.getElementById("pricetotal").innerHTML = pricetotal;
 document.getElementById("pricetotal").value = pricetotal;
+var val = parseInt(document.getElementById("showamount").value);
 document.getElementById("showamount").value = val;
 
-}
+price = 10;
+var pricetotal = plus();
+console.log(plus())
+
+	function plus() {
+			var val = parseInt(document.getElementById("showamount").value);
+			val++
+
+			if (val < 5) {
+			price = 10;
+			}
+
+			else {
+			var reductionshow = " -5% " ;
+			document.getElementById("reductionresult").innerHTML = reductionshow;
+			price = 9.5;
+			}
+
+			document.getElementById("showamount").value = val;
+			var pricetotal = price * val
+			return pricetotal
+
+			}
+
 
 
 	function moins() {
 
 		var val = parseInt(document.getElementById("showamount").value);
 			val-- ;
-		var priceshow = parseInt(document.getElementById("priceshow").value);
-		console.log(priceshow);
-			price = 10;
-		var pricetotal = price * val;
-		console.log(pricetotal)
 
 		
 		if (val >= 5) {
@@ -108,11 +108,13 @@ document.getElementById("showamount").value = val;
 		
 
 
-			var priceshow = pricetotal;
-document.getElementById("pricetotal").innerHTML = pricetotal;
-document.getElementById("showamount").value = val;
-document.getElementById("priceshow").innerHTML = priceshow;
-	}
+		document.getElementById("pricetotal").innerHTML = pricetotal;
+		document.getElementById("showamount").value = val;
+
+
+		return val
+
+			}
 
 select.onchange = function() {
 
@@ -145,19 +147,22 @@ document.getElementById("deliveryresult").innerHTML = addition;
 
 
     var promo = document.getElementById("promo").value;
-    console.log(promo)
+    console.log("promo" + promo)
 
         if ('MikeEstTropCool' == promo) {
             console.log("you get 10% reduction")
         document.getElementById("promoresult").innerHTML = "you get 10% reduction";
         document.getElementById("promoresult").value = 10/100;
-        var mikereduc = document.getElementById("promoresult").value;
-
+        var mikereduc = (document.getElementById("promoresult").value);
+        console.log("mikereduc " + mikereduc)
+		return mikereduc
         }
 
         else {
         console.log("wrong PROMOCODE")
         document.getElementById("promoresult").innerHTML = "WRONG CODE";
+        mikereduc = 0
+        return mikereduc
 
         }
 }
@@ -166,21 +171,21 @@ document.getElementById("deliveryresult").innerHTML = addition;
 function clickTotal() {
 
 
-    document.getElementById("pricetotal").value = pricetotal;
-    pricetotal = parseInt(document.getElementById("pricetotal").value);
+	
+		console.log("promo " + promo())
+		console.log("total " + plus())
+		console.log("total " + moins())
+
+
     console.log("pricetotal " + pricetotal)
-
-    document.getElementById("reductionresult").value = 5/100;
-    var reduction = document.getElementById("reductionresult").value;
-	console.log("reduction " + reduction)
-
 
     var currentoption = select.options[select.selectedIndex].value;
 	console.log("currentoption " + currentoption)
 
 
-    totaldeduct = parseInt(pricetotal) - (parseInt(pricetotal) * parseInt(reduction)) + parseInt(currentoption);
-    console.log(totaldeduct)
+    totaldeduct = (promo() * plus()) + plus();
+    document.getElementById("totaldeduct").innerHTML = totaldeduct;
+    console.log("totaldeduct " + totaldeduct);
 
 }
 
