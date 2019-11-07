@@ -9,11 +9,16 @@
 <body>
 
 <div>
-    
-    <input type="text" id="showamount" value="0">
-    <input type="text" id="priceshow" value="10">
-    <button >ADD</button>   
-<img src="./images/img1.jpg" onclick ="add()">
+    <img src="./images/img1.jpg"></div>
+        <input type="text" id="priceshow" value="10">
+        <div>
+        	<input type="text" id="showamount" value="0">
+        </div>
+
+ <input type="submit" value="+" onclick ="plus()">    
+ <input type="submit" value="-" onclick = "moins()">
+		
+
 </div>
 <div>
 <select name="Country" id="lol" >
@@ -39,12 +44,14 @@
     <h1 ><span> TOTAL PRICE + DEDUCTIONS </span><p id="totaldeduct" ></p></h1><hr>
 <div>
 </div>
-
+<button onclick = "clickTotal()">DEDUCT TOTAL</button>
 <script type="text/javascript">
 
 const select = document.getElementById("lol");
 
-function add() {
+
+function plus() {
+
 var val = parseInt(document.getElementById("showamount").value);
 console.log(val);
 val++
@@ -60,9 +67,6 @@ price = 9.5;
 var pricetotal = price * val;
 console.log(pricetotal)
 
-if (val >= 5) {
-
-    }
     
     var totaldeduct = pricetotal;
     console.log(totaldeduct);
@@ -72,7 +76,43 @@ document.getElementById("pricetotal").value = pricetotal;
 document.getElementById("showamount").value = val;
 
 }
-add();
+
+
+	function moins() {
+
+		var val = parseInt(document.getElementById("showamount").value);
+			val-- ;
+		var priceshow = parseInt(document.getElementById("priceshow").value);
+		console.log(priceshow);
+			price = 10;
+		var pricetotal = price * val;
+		console.log(pricetotal)
+
+		
+		if (val >= 5) {
+		var reduction =  (pricetotal - (pricetotal * 5/100)) + " -5% "  ;
+		console.log(reduction)
+		
+		document.getElementById("reductionresult").value = reduction;
+		document.getElementById("reductionresult").innerHTML = reduction;
+		
+		}
+
+		 else if (val < 5){
+		reduction = 0;
+	
+		document.getElementById("reductionresult").value = reduction;
+		document.getElementById("reductionresult").innerHTML = reduction;
+		}
+
+		
+
+
+			var priceshow = pricetotal;
+document.getElementById("pricetotal").innerHTML = pricetotal;
+document.getElementById("showamount").value = val;
+document.getElementById("priceshow").innerHTML = priceshow;
+	}
 
 select.onchange = function() {
 
@@ -123,16 +163,29 @@ document.getElementById("deliveryresult").innerHTML = addition;
 }
 
 
+function clickTotal() {
+
+
     document.getElementById("pricetotal").value = pricetotal;
-    pricetotal = document.getElementById("priceshow").value;
+    pricetotal = parseInt(document.getElementById("pricetotal").value);
+    console.log("pricetotal " + pricetotal)
 
     document.getElementById("reductionresult").value = 5/100;
-
     var reduction = document.getElementById("reductionresult").value;
-    console.log(reduction);
+	console.log("reduction " + reduction)
+
 
     var currentoption = select.options[select.selectedIndex].value;
+	console.log("currentoption " + currentoption)
+
+
+    totaldeduct = parseInt(pricetotal) - (parseInt(pricetotal) * parseInt(reduction)) + parseInt(currentoption);
+    console.log(totaldeduct)
+
+}
+
 </script>
+
 
 </body>
 </html>
